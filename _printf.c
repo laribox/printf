@@ -13,6 +13,16 @@ int _printf(const char *format, ...)
 	int chars_printed, i;
 	char specifier;
 
+	/*defining struct array of type f_id*/
+
+	f_id format_id[] = {
+	{"c", print_c},
+	{"s", print_s},
+	{"%", print_percent},
+	{"d", print_d},
+	{"i", print_d},
+	};
+
 	va_start(args, format);
 	chars_printed = 0;
 
@@ -22,7 +32,7 @@ int _printf(const char *format, ...)
 		{
 			format++;
 			specifier = *format;
-			for (i = 0; i < format_id_size(); i++)
+			for (i = 0; i < format_id_size(format_id); i++)
 			{
 				if (specifier == *format_id[i].flag)
 				{

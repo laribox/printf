@@ -3,19 +3,21 @@
 #include <stdarg.h>
 #include <stddef.h>
 
-/*defining struct array of type f_id*/
-
-f_id format_id[] = {
-	{"c", print_c},
-	{"s", print_s},
-	{"%", print_percent},
-	{"d", print_d},
-	{"i", print_d},
-};
-/*format_id size calculator*/
-int format_id_size(void)
+/**
+ * format_id_size - Calculate the size of
+ * an struct aray
+ * @format_id: pointer to the struct array
+ * Return: the size of the struct array
+ */
+int format_id_size(f_id *format_id)
 {
-	return (sizeof(format_id) / sizeof(format_id[0]));
+	int count = 0;
+
+	while (format_id[count].flag != NULL)
+	{
+		count++;
+	}
+	return (count);
 }
 
 /**

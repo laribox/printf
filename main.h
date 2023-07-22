@@ -29,7 +29,7 @@ void print_c(va_list args);/*handle char*/
 void print_s(va_list args);/*handle str*/
 void print_percent(va_list args);/*handle '%'*/
 void print_d(va_list args);/*handle dig & int*/
-int format_id_size(void);/*returns size of a f_id element*/
+int format_id_size(f_id *format_id);/*returns size of a f_id element*/
 
 
 /*printf main*/
