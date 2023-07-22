@@ -23,6 +23,9 @@ int _printf(const char *format, ...)
 	{"i", print_d},
 	};
 
+	if (format == NULL)
+		return (-1);
+
 	va_start(args, format);
 	chars_printed = 0;
 
