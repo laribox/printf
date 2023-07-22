@@ -52,6 +52,7 @@ int _printf(const char *format, ...)
 		}
 		format++;
 	}
+	_putchar('\0');
 	va_end(args);
 	return (chars_printed);
 }
