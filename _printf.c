@@ -10,34 +10,34 @@
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int chars_printed, i;
-	char specifier;
-
+	int chars_printed;
+	const char *p;
+	int (*p_fun)(va_list);
+	
 	va_start(args, format);
-	chars_printed = 0;
 
-	while (*format != '\0')
+	if (!format ||(format[0] == '%' && !format[1])) /*edge cases*/
+			return (-1);
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
+		return (-1);
+
+	chars_printed = 0;
+	for (p = format; *p != '\0'; p++) /*loop input str*/
 	{
-		if (*format == '%')
+		if (*p == '%') /*specifier check*/
 		{
-			format++;
-			specifier = *format;
-			for (i = 0; i < format_id_size(); i++)
+			p++;
+			p_fun = get_fun(*p); /*print_fun call*/
+			if (p_fun)
 			{
-				if (specifier == *format_id[i].flag)
-				{
-					format_id[i].f(args);
-					chars_printed++;
-					break;
-				}
+				chars_printed += p_fun(args); /*increment based on fun*/
 			}
 		}
 		else
 		{
-			_putchar(*format);
+			_putchar(*p);
 			chars_printed++;
 		}
-		format++;
 	}
 	va_end(args);
 	return (chars_printed);
