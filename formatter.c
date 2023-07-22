@@ -40,7 +40,7 @@ void print_d(va_list args)
 
 	while (div > 0)
 	{
-		dig = num /div;
+		dig = num / div;
 		_putchar('0' + dig);
 		num %= div;
 		div /= 10;

@@ -15,7 +15,7 @@ typedef struct format
 {
 	char *flag;
 	void (*f)(va_list);
-}f_id;
+} f_id;
 
 extern f_id format_id[];
 

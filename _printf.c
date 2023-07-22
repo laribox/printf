@@ -4,7 +4,7 @@
 
 /**
  * _printf - produce output based on a format
- * fomrat: pointer to str
+ * @fomrat: pointer to str
  * Return: number of printed chars
  */
 int _printf(const char *format, ...)
