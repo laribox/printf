@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 			{
 				chars_printed += p_fun(args); /*increment based on fun*/
 			}
-			else
+			else /*test correct outputs later*/
 			{
 				_putchar('%');
 				_putchar(*p);
