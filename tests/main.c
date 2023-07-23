@@ -37,6 +37,8 @@ int main()
     _printf("hex 17 = %x\n", 17);
     printf("hex 17 = %x\n", 17);
 
+    _printf("hex 17 = %X\n", 17);
+    printf("hex 17 = %X\n", 17);
 
     _printf("Very Large: %d\n", 999999999);
     printf("Very Large: %d\n", 999999999);

@@ -20,7 +20,7 @@ char *convert(unsigned long int n, int base, int cas)
 	/*cas == 1 ->uppercase*/
 
 	do {
-		*--p = base[n % base];
+		*--p = UorL[n % base];
 		n /= base;
 	} while (n != 0);
 

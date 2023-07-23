@@ -73,32 +73,10 @@ int print_x(va_list args)
 {
 	unsigned int num = va_arg(args, unsigned int);
 	int chars_printed = 0;
+	char *s;
 
-	if (num == 0)
-	{
-		_putchar('0');
-		chars_printed++;
-	}
-	else
-	{
-		char hex_chars[] = "0123456789abcdef";
-		char hex_digits[20];
-		int i = 0;
-
-		while (num > 0)
-		{
-			hex_digits[i] = hex_chars[num % 16];
-			num /= 16;
-			i++;
-		}
-
-		while (i > 0)
-		{
-			i--;
-			_putchar(hex_digits[i]);
-			chars_printed++;
-		}
-	}
+	s = convert(num, 16, 0);
+	chars_printed += _puts(s);
 
 	return (chars_printed);
 }
@@ -112,32 +90,11 @@ int print_X(va_list args)
 {
 	unsigned int num = va_arg(args, unsigned int);
 	int chars_printed = 0;
+	char *s;
 
-	if (num == 0)
-	{
-		_putchar('0');
-		chars_printed++;
-	}
-	else
-	{
-		char hex_chars[] = "0123456789ABCDEF";
-		char hex_digits[20];
-		int i = 0;
+	s = convert(num, 16, 1);
 
-		while (num > 0)
-		{
-			hex_digits[i] = hex_chars[num % 16];
-			num /= 16;
-			i++;
-		}
-
-		while (i > 0)
-		{
-			i--;
-			_putchar(hex_digits[i]);
-			chars_printed++;
-		}
-	}
+	chars_printed += _puts(s);
 
 	return (chars_printed);
 }
