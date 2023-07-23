@@ -18,9 +18,11 @@ int (*get_fun(char c))(va_list)
 		{'o', print_o},
 		{'x', print_x},
 		{'X', print_X},
+		{'p', print_adr},
+		{'R', print_r13}
 
 	};
-	int A_size = 10;
+	int A_size = 12;
 	int i = 0;
 
 	while (i < A_size)
