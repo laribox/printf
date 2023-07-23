@@ -22,7 +22,7 @@ int (*get_fun(char c))(va_list)
 		{'R', print_r13}
 
 	};
-	int A_size = 10;
+	int A_size = 12;
 	int i = 0;
 
 	while (i < A_size)

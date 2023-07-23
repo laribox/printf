@@ -39,6 +39,8 @@ int main()
     _printf("oct 30 = %o\n", 30);
     printf("oct 30 = %o\n", 30);
 
+    _printf("rot13: HellO is %R\n", "HellO");
+    printf("rot13: HellO is %R\n", "HellO");
 
     _printf("hex 10 = %x\n", 10);
     printf("hex 10 = %x\n", 10);

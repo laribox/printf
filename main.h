@@ -45,6 +45,10 @@ int print_o(va_list args);/*handle octal file task3_functions*/
 int print_x(va_list args);/*handle Unsigned hexadecimal integer file task3_functions*/
 int print_X(va_list args);/*handle Unsigned hexadecimal integer upercase file task3_functions*/
 
+/*special string manipulation*/
+int print_adr(va_list args);/*print address*/
+int print_r13(va_list args);/*print rot13 of input str*/
+
 /*printf main*/
 int _printf(const char *format, ...);
 #endif /*MAIN_H*/
