@@ -37,9 +37,16 @@ int print_d(va_list args);/*handle dig & int*/
 int print_b(va_list args);/*handle binary file print_numbers*/
 
 int print_u(va_list args);/*handle unsigned int file task3_functions*/
-int print_o(va_list args);/*handle octal file task3_functions*/
-int print_x(va_list args);/*handle Unsigned hexadecimal integer file task3_functions*/
-int print_X(va_list args);/*handle Unsigned hexadecimal integer upercase file task3_functions*/
+
+int print_o(va_list args);
+/*handle octal file task3_functions*/
+
+int print_x(va_list args);
+/*handle Unsigned hexadecimal integer file task3_functions*/
+
+int print_X(va_list args);
+/*handle Unsigned hexadecimal integer upercase file task3_functions*/
+
 
 /*printf main*/
 int _printf(const char *format, ...);
