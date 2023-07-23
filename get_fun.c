@@ -14,9 +14,13 @@ int (*get_fun(char c))(va_list)
 		{'d', print_d},
 		{'i', print_d},
 		{'b', print_b},
+		{'u', print_u},
+		{'o', print_o},
+		{'x', print_x},
+		{'X', print_X},
 
 	};
-	int A_size = 6;
+	int A_size = 10;
 	int i = 0;
 
 	while (i < A_size)
