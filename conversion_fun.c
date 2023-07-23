@@ -1,37 +1,34 @@
 #include "main.h"
 
 /**
- * print_u - print unsigned int
+ * print_b - print binary on unsigned int
  * @args: passed integer
- * Return: length of printed unsigned int
+ * Return: length of printed binary
  */
-int print_u(va_list args)
+int print_b(va_list args)
 {
 	unsigned int num;
-	unsigned int div, dig;
-	int chars_printed;
+	int i, j;
+	/* Stores binary representation of number.*/
+	int binaryNum[32]; /* Assuming 32 bit integer.*/
 
-	chars_printed = 0;
 	num = va_arg(args, unsigned int);
-
 	if (num == 0)
 	{
 		_putchar('0');
-		chars_printed++;
+		return (1);
 	}
-
-	div = 1;
-	while (num / div > 9)
-		div *= 10;
-
-	while (div > 0)
+	for (i = 0; num > 0; i++)
 	{
-		dig = num / div;
-		chars_printed += _putchar('0' + dig);
-		num %= div;
-		div /= 10;
+		binaryNum[i] = num % 2;
+		num /= 2;
 	}
-	return (chars_printed);
+
+	/* Printing array in reverse order.*/
+	for (j = i - 1; j >= 0; j--)
+		_putchar('0' +  binaryNum[j]);
+
+	return (i);
 }
 
 /**

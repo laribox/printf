@@ -34,6 +34,8 @@ int main()
     printf("Special Characters: \\n = %d, \\t = %i\n", '\n', '\t');
 
 
+    _printf("hex 17 = %#x\n", 17);
+    printf("hex 17 = %#x\n", 17);
 
 
     _printf("Very Large: %d\n", 999999999);
