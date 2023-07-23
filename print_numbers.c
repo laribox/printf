@@ -48,11 +48,12 @@ int print_d(va_list args)
  */
 int print_b(va_list args)
 {
-	int num, i, j;
+	unsigned int num;
+	int i, j;
 	/* Stores binary representation of number.*/
 	int binaryNum[32]; /* Assuming 32 bit integer.*/
 
-	num = va_arg(args, int);
+	num = va_arg(args, unsigned int);
 	if (num == 0)
 	{
 		_putchar('0');
