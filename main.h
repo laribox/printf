@@ -31,6 +31,7 @@ int _puts(char *s);
 int print_c(va_list args);/*handle char*/
 int print_s(va_list args);/*handle str*/
 int print_percent(va_list args);/*handle '%'*/
+
 /*number*/
 int print_d(va_list args);/*handle dig & int*/
 
