@@ -23,7 +23,7 @@ int print_s(va_list args)
 	s = va_arg(args, char *); /*assign the varadiac argument to s*/
 
 	if (!s) /*check s != NULL*/
-		s = "(nil)";
+		s = "(null)";
 
 	_puts(s); /*prints the whole string*/
 
