@@ -3,6 +3,7 @@
 /**
  * print_c - print single char
  * @args: passed char -> promoted to int
+ * Return: length of output
  */
 int print_c(va_list args)
 {
@@ -12,6 +13,7 @@ int print_c(va_list args)
 /**
  * print_s - print string
  * @args: passed string
+ * Return: length of output
  */
 int print_s(va_list args)
 {
@@ -30,11 +32,12 @@ int print_s(va_list args)
 	while (s[chars_printed]) /*calc printed chars - '\0'*/
 		chars_printed++;
 
-	return(chars_printed);
+	return (chars_printed);
 }
 /**
  * print_percent - print '%'
  * @args: passed '%'
+ * Return: length of output
  */
 int print_percent(va_list args)
 {

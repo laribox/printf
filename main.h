@@ -15,7 +15,7 @@ typedef struct format
 {
 	char c;
 	int (*f)(va_list);
-}s_id;
+} s_id;
 
 /*Functions*/
 /*Callers*/

@@ -4,6 +4,7 @@
 /**
  * print_d - print decimal or integer
  * @args: passed integer
+ * Return: length of printed int
  */
 int print_d(va_list args)
 {
@@ -25,7 +26,7 @@ int print_d(va_list args)
 
 	while (div > 0)
 	{
-		dig = num /div;
+		dig = num / div;
 		chars_printed += _putchar('0' + dig);
 		num %= div;
 		div /= 10;

@@ -4,7 +4,7 @@
 
 /**
  * _printf - produce output based on a format
- * fomrat: pointer to str
+ * @format: pointer to str
  * Return: number of printed chars
  */
 int _printf(const char *format, ...)
@@ -13,11 +13,11 @@ int _printf(const char *format, ...)
 	int chars_printed;
 	const char *p;
 	int (*p_fun)(va_list);
-	
+
 	va_start(args, format);
 
-	if (!format ||(format[0] == '%' && !format[1])) /*edge cases*/
-			return (-1);
+	if (!format || (format[0] == '%' && !format[1]))/*edge cases*/
+		return (-1);
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
 
@@ -41,4 +41,4 @@ int _printf(const char *format, ...)
 	}
 	va_end(args);
 	return (chars_printed);
-}			
+}
