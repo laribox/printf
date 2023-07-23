@@ -35,7 +35,7 @@ int print_u(va_list args)
 }
 
 /**
- * print_o - print octal of insigned int
+ * print_o - print octal of unsigned int
  * @args: passed integer
  * Return: length of printed binary
  * Description: to calculate octal we divide by 8
