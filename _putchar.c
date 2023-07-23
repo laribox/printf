@@ -8,23 +8,8 @@
  */
 int _putchar(char c)
 {
-	static char buffer[1024];
-
-	int chars_written = 0;
-
-	if (c == '\0') /* Buffer full or end of string */
-	{
-		chars_written = write(1, buffer, index);
-		index = 0;
-	}
-
-	if (c != '\0')
-	{
-		buffer[index] = c;
-
-	}
-
-	return (chars_written);
+	write(1, &c, 1);
+	return (1);
 }
 /**
  * _puts - print str to stdout
