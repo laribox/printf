@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 
 	if (!format || (format[0] == '%' && !format[1]))/*edge cases*/
-		return (-1);
+	return (-1);
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
 
@@ -31,6 +31,11 @@ int _printf(const char *format, ...)
 			if (p_fun)
 			{
 				chars_printed += p_fun(args); /*increment based on fun*/
+			}
+			else
+			{
+				_putchar(*p);
+				chars_printed++;
 			}
 		}
 		else

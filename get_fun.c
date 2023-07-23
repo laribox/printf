@@ -13,6 +13,7 @@ int (*get_fun(char c))(va_list)
 		{'%', print_percent},
 		{'d', print_d},
 		{'i', print_d},
+
 	};
 	int A_size = 5;
 	int i = 0;
