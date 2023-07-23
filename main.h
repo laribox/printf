@@ -34,6 +34,7 @@ int print_percent(va_list args);/*handle '%'*/
 /*number*/
 int print_d(va_list args);/*handle dig & int*/
 
+int print_b(va_list args);/*handle binary file print_numbers*/
 
 /*printf main*/
 int _printf(const char *format, ...);

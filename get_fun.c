@@ -13,9 +13,10 @@ int (*get_fun(char c))(va_list)
 		{'%', print_percent},
 		{'d', print_d},
 		{'i', print_d},
+		{'b', print_b},
 
 	};
-	int A_size = 5;
+	int A_size = 6;
 	int i = 0;
 
 	while (i < A_size)

@@ -40,3 +40,33 @@ int print_d(va_list args)
 	}
 	return (chars_printed);
 }
+
+/**
+ * print_b - print binary on insigned int
+ * @args: passed integer
+ * Return: length of printed binary
+ */
+int print_b(va_list args)
+{
+	int num, i, j;
+	/* Stores binary representation of number.*/
+	int binaryNum[32]; /* Assuming 32 bit integer.*/
+
+	num = va_arg(args, int);
+	if (num == 0)
+	{
+		_putchar('0');
+		return (1);
+	}
+	for (i = 0; num > 0; i++)
+	{
+		binaryNum[i] = num % 2;
+		num /= 2;
+	}
+
+	/* Printing array in reverse order.*/
+	for (j = i - 1; j >= 0; j--)
+		_putchar('0' +  binaryNum[j]);
+
+	return (i);
+}
