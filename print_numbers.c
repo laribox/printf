@@ -14,7 +14,7 @@ int print_d(va_list args)
 
 	chars_printed = 0;
 	num = va_arg(args, int);
-	
+
 	chars_printed += digit_printer(num);
 
 	return (chars_printed);
@@ -60,7 +60,7 @@ int digit_printer(int num)
 
 	if (x / 10)
 		digit_printer(x / 10); /*recursion loop*/
-	
+
 	chars_printed += _putchar((x % 10) + '0'); /*print 1 dig*/
 
 	return (chars_printed);

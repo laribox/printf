@@ -15,7 +15,7 @@ int print_b(va_list args)
 
 	num = va_arg(args, unsigned int);
 	s = convert(num, 2, 0);
-	
+
 	chars_printed += _puts(s);
 
 	return (chars_printed);
@@ -35,8 +35,8 @@ int print_o(va_list args)
 	int i = 0;
 
 	num = va_arg(args, unsigned int);
-	s = convert(num , 8, 0);
-	
+	s = convert(num, 8, 0);
+
 	i += _puts(s);
 
 	return (i);

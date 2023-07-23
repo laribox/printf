@@ -2,7 +2,7 @@
 
 /**
  * print_r13 - print rot 13 version of input
- * @arg: input str
+ * @args: input str
  * Return: number of printed chars
  */
 int print_r13(va_list args)
