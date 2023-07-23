@@ -34,7 +34,9 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
+				_putchar("%");
 				_putchar(*p);
+				chars_printed++;
 				chars_printed++;
 			}
 		}
