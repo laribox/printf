@@ -33,12 +33,14 @@ int main()
     _printf("Special Characters: \\n = %d, \\t = %i\n", '\n', '\t');
     printf("Special Characters: \\n = %d, \\t = %i\n", '\n', '\t');
 
+    _printf("binary 17 = %b\n", 17);
+    printf("binary 17 = %b\n", 17);
 
-    _printf("hex 17 = %x\n", 17);
-    printf("hex 17 = %x\n", 17);
+    _printf("hex 10 = %x\n", 10);
+    printf("hex 10 = %x\n", 10);
 
-    _printf("hex 17 = %X\n", 17);
-    printf("hex 17 = %X\n", 17);
+    _printf("HEX 12 = %X\n", 12);
+    printf("HEX 12 = %X\n", 12);
 
     _printf("Very Large: %d\n", 999999999);
     printf("Very Large: %d\n", 999999999);
