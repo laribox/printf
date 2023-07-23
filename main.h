@@ -8,30 +8,33 @@
 
 /**
  * struct format - list of type specifiers/modifying function
- * @flag: '%' + 'char'
- * @f: fn ptr specific for each case
+ * @c: specifier char
+ * @f: ptr to operation fn
  */
 typedef struct format
 {
-	char *flag;
-	void (*f)(va_list);
-} f_id;
-
-extern f_id format_id[];
+	char c;
+	int (*f)(va_list);
+}s_id;
 
 /*Functions*/
+/*Callers*/
+int (*get_fun(char c))(va_list);
 
 /*print a char(using write())*/
 int _putchar(char c);
+int _puts(char *s);
 
-/*funcs for flags*/
-void print_c(va_list args);/*handle char*/
-void print_s(va_list args);/*handle str*/
-void print_percent(va_list args);/*handle '%'*/
-void print_d(va_list args);/*handle dig & int*/
-int format_id_size(f_id *format_id);/*returns size of a f_id element*/
+/*print funcs per specifiers*/
+/*charachters*/
+int print_c(va_list args);/*handle char*/
+int print_s(va_list args);/*handle str*/
+int print_percent(va_list args);/*handle '%'*/
+/*number*/
+int print_d(va_list args);/*handle dig & int*/
 
 
 /*printf main*/
 int _printf(const char *format, ...);
 #endif /*MAIN_H*/
+

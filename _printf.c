@@ -4,55 +4,41 @@
 
 /**
  * _printf - produce output based on a format
- * @fomrat: pointer to str
+ * fomrat: pointer to str
  * Return: number of printed chars
  */
 int _printf(const char *format, ...)
 {
 	va_list args;
-	int chars_printed, i;
-	char specifier;
+	int chars_printed;
+	const char *p;
+	int (*p_fun)(va_list);
+	
+	va_start(args, format);
 
-	/*defining struct array of type f_id*/
-
-	f_id format_id[] = {
-	{"c", print_c},
-	{"s", print_s},
-	{"%", print_percent},
-	{"d", print_d},
-	{"i", print_d},
-	};
-
-	if (format == NULL)
+	if (!format ||(format[0] == '%' && !format[1])) /*edge cases*/
+			return (-1);
+	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
 
-	va_start(args, format);
 	chars_printed = 0;
-
-	while (*format != '\0')
+	for (p = format; *p != '\0'; p++) /*loop input str*/
 	{
-		if (*format == '%')
+		if (*p == '%') /*specifier check*/
 		{
-			format++;
-			specifier = *format;
-			for (i = 0; i < format_id_size(format_id); i++)
+			p++;
+			p_fun = get_fun(*p); /*print_fun call*/
+			if (p_fun)
 			{
-				if (specifier == *format_id[i].flag)
-				{
-					format_id[i].f(args);
-					chars_printed++;
-					break;
-				}
+				chars_printed += p_fun(args); /*increment based on fun*/
 			}
 		}
 		else
 		{
-			_putchar(*format);
+			_putchar(*p);
 			chars_printed++;
 		}
-		format++;
 	}
-	_putchar('\0');
 	va_end(args);
 	return (chars_printed);
-}
+}			
