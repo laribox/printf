@@ -10,34 +10,13 @@
 int print_d(va_list args)
 {
 	int num;
-	int div, dig;
 	int chars_printed;
 
 	chars_printed = 0;
 	num = va_arg(args, int);
-	/* Handle the case of INT_MIN (-2147483648) separately */
-	if (num == -2147483648)
-	{
-		chars_printed += _puts("-2147483648");
-		return (chars_printed);
-	}
-	if (num < 0)
-	{
-		chars_printed += _putchar('-');
-		num = -num;
-	}
+	
+	chars_printed += digit_printer(num);
 
-	div = 1;
-	while (num / div > 9)
-		div *= 10;
-
-	while (div > 0)
-	{
-		dig = num / div;
-		chars_printed += _putchar('0' + dig);
-		num %= div;
-		div /= 10;
-	}
 	return (chars_printed);
 }
 
@@ -49,28 +28,40 @@ int print_d(va_list args)
 int print_u(va_list args)
 {
 	unsigned int num;
-	unsigned int div, dig;
 	int chars_printed;
+	char *s;
 
 	chars_printed = 0;
 	num = va_arg(args, unsigned int);
+	s = convert(num, 10, 0);
 
-	if (num == 0)
+	_puts(s);
+
+	return (chars_printed);
+}
+/**
+ * digit_printer - print input number by digit
+ * @num: input number
+ * Return: print count
+ */
+int digit_printer(int num)
+{
+	unsigned int x;
+	int chars_printed;
+
+	chars_printed = 0;
+	if (num < 0)
 	{
-		_putchar('0');
-		chars_printed++;
+		chars_printed += _putchar('-');
+		x = -num;
 	}
+	else
+		x = num;
 
-	div = 1;
-	while (num / div > 9)
-		div *= 10;
+	if (x / 10)
+		digit_printer(x / 10); /*recursion loop*/
+	
+	chars_printed += _putchar((x % 10) + '0'); /*print 1 dig*/
 
-	while (div > 0)
-	{
-		dig = num / div;
-		chars_printed += _putchar('0' + dig);
-		num %= div;
-		div /= 10;
-	}
 	return (chars_printed);
 }

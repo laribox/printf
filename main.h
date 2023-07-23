@@ -35,6 +35,7 @@ int print_percent(va_list args);/*handle '%'*/
 /*number*/
 int print_d(va_list args);/*handle dig & int*/
 int print_u(va_list args);/*handle unsigned int file task3_functions*/
+int digit_printer(int num);/*solve the int_max issue(print number)*/
 
 
 /*base-conversion*/

@@ -37,8 +37,8 @@ int print_r13(va_list args)
  * @args: input variable
  * Return: num of printed chars
  */
-int print_adr(va_list args)
+int print_adr(va_list args)/*prototype to be coded*/
 {
 	(void)args;
-	return (0);
+	return (0); /*counter for printed chars*/
 }
