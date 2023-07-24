@@ -9,36 +9,30 @@
  */
 int print_d(va_list args)
 {
-        int num; 
-        unsigned int div, dig;
-        int chars_printed;
+	int num;
+	unsigned int div, dig;
+	int chars_printed;
 
-        chars_printed = 0; 
-        num = va_arg(args, int);
-        /* Handle the case of INT_MIN (-2147483648) separately */
-        /*if (num == -2147483648)
-        {
-                chars_printed += _puts("-2147483648");
-                return (chars_printed);
-        }*/
-        if (num < 0)
-        {
-                chars_printed += _putchar('-');
-                num = -num;
-        }
+	chars_printed = 0;
+	num = va_arg(args, int);
+	if (num < 0)
+	{
+		chars_printed += _putchar('-');
+		num = -num;
+	}
 
-        div = 1;
-        while (num / div > 9)
-                div *= 10;
+	div = 1;
+	while (num / div > 9)
+		div *= 10;
 
-        while (div > 0)
-        {
-                dig = num / div; 
-                chars_printed += _putchar('0' + dig);
-                num %= div;
-                div /= 10;
-        }
-        return (chars_printed);
+	while (div > 0)
+	{
+		dig = num / div;
+		chars_printed += _putchar('0' + dig);
+		num %= div;
+		div /= 10;
+	}
+	return (chars_printed);
 }
 /**
  * digit_printer - print input number by digit
