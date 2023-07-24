@@ -9,7 +9,7 @@
  */
 int _printf(const char *format, ...)
 {
-	func_args f_args;	
+	func_args f_args;
 	int chars_printed;
 	const char *p;
 	int (*p_fun)(func_args);

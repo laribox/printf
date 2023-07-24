@@ -11,7 +11,7 @@
 /**
  * struct arguments - flag precision etc...
  * @args: the args passed for printf
- * @flags: flag used 
+ * @flags: flag used
  */
 typedef struct arguments
 {

@@ -63,7 +63,7 @@ int digit_printer(int num)
 
 /**
  * print_b - print binary on insigned int
- * @args: passed integer
+ * @f_args: passed integer
  * Return: length of printed binary
  */
 int print_b(func_args f_args)

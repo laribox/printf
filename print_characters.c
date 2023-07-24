@@ -2,7 +2,7 @@
 
 /**
  * print_c - print single char
- * @args: passed char -> promoted to int
+ * @f_args: passed char -> promoted to int
  * Return: length of output
  */
 int print_c(func_args f_args)
@@ -12,7 +12,7 @@ int print_c(func_args f_args)
 }
 /**
  * print_s - print string
- * @args: passed string
+ * @f_args: passed string
  * Return: length of output
  */
 int print_s(func_args f_args)
@@ -36,7 +36,7 @@ int print_s(func_args f_args)
 }
 /**
  * print_percent - print '%'
- * @args: passed '%'
+ * @f_args: passed '%'
  * Return: length of output
  */
 int print_percent(func_args f_args)
