@@ -2,10 +2,6 @@
 
 /**
  * print_r13 - print rot 13 version of input
-<<<<<<< HEAD
-=======
-
->>>>>>> 34814d14b4a8ab9f99561a60ff463c4cc16ba48e
  * @f_args: input str
  * Return: number of printed chars
  */
