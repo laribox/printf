@@ -5,9 +5,17 @@
  * @args: passed char -> promoted to int
  * Return: length of output
  */
+<<<<<<< HEAD
 int print_c(func_args f_args)
 {
 	_putchar(va_arg(f_args.args, int));
+=======
+
+int print_c(func_args f_args)
+{
+	_putchar(va_arg(f_args.args, int));
+
+>>>>>>> 34814d14b4a8ab9f99561a60ff463c4cc16ba48e
 	return (1);
 }
 /**
@@ -15,6 +23,10 @@ int print_c(func_args f_args)
  * @args: passed string
  * Return: length of output
  */
+<<<<<<< HEAD
+=======
+
+>>>>>>> 34814d14b4a8ab9f99561a60ff463c4cc16ba48e
 int print_s(func_args f_args)
 {
 	char *s;
@@ -39,6 +51,10 @@ int print_s(func_args f_args)
  * @args: passed '%'
  * Return: length of output
  */
+<<<<<<< HEAD
+=======
+
+>>>>>>> 34814d14b4a8ab9f99561a60ff463c4cc16ba48e
 int print_percent(func_args f_args)
 {
 	(void)f_args;

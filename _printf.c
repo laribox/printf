@@ -30,6 +30,10 @@ int _printf(const char *format, ...)
 			p_fun = get_fun(*p); /*print_fun call*/
 			if (p_fun)
 			{
+<<<<<<< HEAD
+=======
+
+>>>>>>> 34814d14b4a8ab9f99561a60ff463c4cc16ba48e
 				chars_printed += p_fun(f_args); /*increment based on selected func*/
 			}
 			else /*test correct outputs later*/
@@ -45,6 +49,12 @@ int _printf(const char *format, ...)
 			chars_printed++;
 		}
 	}
+<<<<<<< HEAD
 	va_end(f_args.args);
+=======
+
+	va_end(f_args.args);
+
+>>>>>>> 34814d14b4a8ab9f99561a60ff463c4cc16ba48e
 	return (chars_printed);
 }
