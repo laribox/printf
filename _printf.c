@@ -9,12 +9,12 @@
  */
 int _printf(const char *format, ...)
 {
-	va_list args;
+	func_args f_args;	
 	int chars_printed;
 	const char *p;
-	int (*p_fun)(va_list);
+	int (*p_fun)(func_args);
 
-	va_start(args, format);
+	va_start(f_args.args, format);
 
 	if (!format || (format[0] == '%' && !format[1]))/*edge cases*/
 	return (-1);
@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 			p_fun = get_fun(*p); /*print_fun call*/
 			if (p_fun)
 			{
-				chars_printed += p_fun(args); /*increment based on selected func*/
+				chars_printed += p_fun(f_args); /*increment based on selected func*/
 			}
 			else /*test correct outputs later*/
 			{
@@ -45,6 +45,6 @@ int _printf(const char *format, ...)
 			chars_printed++;
 		}
 	}
-	va_end(args);
+	va_end(f_args.args);
 	return (chars_printed);
 }
