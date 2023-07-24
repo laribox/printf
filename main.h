@@ -5,7 +5,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-/*structures*/
+/*Structures*/
 
 /**
  * struct format - list of type specifiers/modifying function
