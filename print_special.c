@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_r13 - print rot 13 version of input
+ * print_r13 - Print rot 13 version of input
  * @args: input str
  * Return: number of printed chars
  */

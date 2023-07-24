@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * get_fun - fn pointer to list element
+ * get_fun - Fn pointer to list element
  * @c: passed specifier
  * Return: ptr to desired fn
  */

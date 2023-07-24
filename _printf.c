@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * _printf - produce output based on a format
+ * _printf - Produce output based on a format
  * @format: pointer to str
  * Return: number of printed chars
  */

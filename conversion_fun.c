@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* print_u - print unsigned int
+* print_u - Print unsigned int
 * @args: passed integer
 * Return: length of printed unsigned int
 */

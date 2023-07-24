@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * convert - converts input num to input base Lower or Upper
+ * convert - Converts input num to input base Lower or Upper
  * @n: input number
  * @base: input base
  * @cas: LorU for hex || HEX

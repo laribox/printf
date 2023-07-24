@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _putchar - print single cahr to stdout
+ * _putchar - Print single cahr to stdout
  * @c: input char
  * Return: 1
  */

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_c - print single char
+ * print_c - Print single char
  * @args: passed char -> promoted to int
  * Return: length of output
  */

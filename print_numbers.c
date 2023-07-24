@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * print_d - print decimal or integer
+ * print_d - Print decimal or integer
  * @args: passed integer
  * Return: length of printed int
  */

@@ -6,8 +6,8 @@ int main()
 {
 	int n = 1;
 
-	_printf("address of n is: %p\n", &n);
-	printf("address of n is: %p\n", &n);
+	_printf("adress of n is: %p\n", &n);
+	printf("adress of n is: %p\n", &n);
 	
 	_printf("reverse is %r\n", "reverse");
 
