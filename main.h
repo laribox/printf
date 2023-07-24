@@ -34,7 +34,6 @@ int print_percent(va_list args);/*handle '%'*/
 
 /*number*/
 int print_d(va_list args);/*handle dig & int*/
-int print_u(va_list args);/*handle unsigned int file task3_functions*/
 int digit_printer(int num);/*solve the int_max issue(print number)*/
 
 
@@ -42,21 +41,21 @@ int digit_printer(int num);/*solve the int_max issue(print number)*/
 /*base-conversion*/
 char *convert(unsigned long int n, int base, int cas);
 /*conversions*/
-int print_b(va_list args);/*handle binary file print_numbers*/
-int print_o(va_list args);/*handle octal file task3_functions*/
-int print_x(va_list args);/*handle Unsigned hexadecimal integer file task3_functions*/
-int print_X(va_list args);/*handle Unsigned hexadecimal integer upercase file task3_functions*/
 
-int print_u(va_list args);/*handle unsigned int file task3_functions*/
+/*handle binary file print_numbers*/
+int print_b(va_list args;)
 
-int print_o(va_list args);
 /*handle octal file task3_functions*/
+int print_o(va_list args);
 
-int print_x(va_list args);
 /*handle Unsigned hexadecimal integer file task3_functions*/
+int print_x(va_list args);
 
-int print_X(va_list args);
 /*handle Unsigned hexadecimal integer upercase file task3_functions*/
+int print_X(va_list args);
+
+/*handle unsigned int file task3_functions*/
+int print_u(va_list args);
 
 
 
