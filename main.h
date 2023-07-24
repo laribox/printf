@@ -46,6 +46,7 @@ int digit_printer(int num);/*solve the int_max issue(print number)*/
 
 /*base-conversion*/
 char *convert(unsigned long int n, int base, int cas);
+
 /*conversions*/
 
 /*handle binary file print_numbers*/
@@ -66,8 +67,15 @@ int print_u(va_list args);
 
 
 /*special string manipulation*/
-int print_adr(va_list args);/*print address*/
-int print_r13(va_list args);/*print rot13 of input str*/
+
+/*print address*/
+int print_adr(va_list args);
+
+/*print rot13 of input str*/
+int print_r13(va_list args);
+
+/*print reversed str*/
+int print_rev(va_list args);
 
 /*printf main*/
 int _printf(const char *format, ...);

@@ -46,10 +46,10 @@ int print_adr(va_list args)
 	i = 0;
 	address = va_arg(args, unsigned long int);
 
-	if (address != 0)
+	if (address == 0)
 		return (_puts("(NULL)"));
 
-	s = convert(address, 16, 1);
+	s = convert(address, 16, 0);
 
 	i += _puts("0x");
 	i += _puts(s); /*convert address to hex*/
