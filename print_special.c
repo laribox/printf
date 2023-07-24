@@ -37,14 +37,22 @@ int print_r13(va_list args)
  * @args: input variable
  * Return: num of printed chars
  */
-int print_adr(va_list args)/*prototype to be coded*/
+int print_adr(va_list args)
 {
 	int i;
+	char *s;
+	unsigned long int address;
 
 	i = 0;
+	address = va_arg(args, unsigned long int);
+
+	if (address != 0)
+		return (_puts("(NULL)"));
+
+	s = convert(address, 16, 1);
 
 	i += _puts("0x");
-	i = print_x(args); /*convert address to hex*/
+	i += _puts(s); /*convert address to hex*/
 
 	return (i); /*counter for printed chars*/
 }
