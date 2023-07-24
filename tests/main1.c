@@ -9,7 +9,7 @@ int main()
 	_printf("address of n is: %p\n", &n);
 	printf("address of n is: %p\n", &n);
 	
-	_printf("reverse is %r\n", "reverse");
+	_printf("reverse = %r\n", "reverse");
 
 	_printf("Positive: %d\n", 123);
 	printf("Positive: %d\n", 123);

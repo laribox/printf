@@ -2,17 +2,17 @@
 
 /**
  * print_r13 - print rot 13 version of input
- * @args: input str
+ * @f_args: input str
  * Return: number of printed chars
  */
-int print_r13(va_list args)
+int print_r13(func_args f_args)
 {
 	char *s;
 	int i, j;
 	char alpha[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	s = va_arg(args, char *);
+	s = va_arg(f_args.args, char *);
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -34,22 +34,22 @@ int print_r13(va_list args)
 
 /**
  * print_adr - print a variables adress
- * @args: input variable
+ * @f_args: input variable
  * Return: num of printed chars
  */
-int print_adr(va_list args)
+int print_adr(func_args f_args)/*prototype to be coded*/
 {
 	int i;
 	char *s;
 	unsigned long int address;
 
 	i = 0;
-	address = va_arg(args, unsigned long int);
+	address = va_arg(f_args.args, unsigned long int);
 
-	if (address == 0)
+	if (address != 0)
 		return (_puts("(NULL)"));
 
-	s = convert(address, 16, 0);
+	s = convert(address, 16, 1);
 
 	i += _puts("0x");
 	i += _puts(s); /*convert address to hex*/
@@ -59,16 +59,16 @@ int print_adr(va_list args)
 
 /**
  * print_rev - reverse a string then prints it
- * @args: input str
+ * @f_args: input str
  * Return: chars_printed
  */
-int print_rev(va_list args)
+int print_rev(func_args f_args)
 {
 	char *s;
 	char *p;
 	int chars_printed;
 
-	s = va_arg(args, char *);
+	s = va_arg(f_args.args, char *);
 	p = s;
 
 	chars_printed = 0;

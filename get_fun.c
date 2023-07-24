@@ -5,7 +5,7 @@
  * @c: passed specifier
  * Return: ptr to desired fn
  */
-int (*get_fun(char c))(va_list)
+int (*get_fun(char c))(func_args)
 {
 	s_id spec_ptr[] = {
 		{'c', print_c},
@@ -19,10 +19,15 @@ int (*get_fun(char c))(va_list)
 		{'x', print_x},
 		{'X', print_X},
 		{'p', print_adr},
+<<<<<<< HEAD
 		{'R', print_r13},
 		{'r', print_rev}
+=======
+		{'R', print_r13}
+>>>>>>> parent of 5304765... working print_rev
+
 	};
-	int A_size = 13;
+	int A_size = 12;
 	int i = 0;
 
 	while (i < A_size)
