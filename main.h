@@ -78,7 +78,7 @@ int print_adr(func_args f_args);/*print address*/
 int print_r13(func_args f_args);/*print rot13 of input str*/
 
 /*print reversed str*/
-int print_rev(va_list args);
+int print_rev(func_args f_args);
 /*printf main*/
 int _printf(const char *format, ...);
 #endif /*MAIN_H*/
