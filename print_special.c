@@ -46,10 +46,10 @@ int print_adr(func_args f_args)/*prototype to be coded*/
 	i = 0;
 	address = va_arg(f_args.args, unsigned long int);
 
-	if (address == 0)
+	if (address != 0)
 		return (_puts("(NULL)"));
 
-	s = convert(address, 16, 0);
+	s = convert(address, 16, 1);
 
 	i += _puts("0x");
 	i += _puts(s); /*convert address to hex*/

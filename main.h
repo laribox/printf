@@ -72,11 +72,12 @@ int print_u(func_args f_args);
 
 
 /*special string manipulation*/
-int print_adr(func_args f_args);/*print address*/
-int print_r13(func_args f_args);/*print rot13 of input str*/
-
 /*print reversed str*/
-int print_rev(func_args f_args);
+int print_rev(va_list args);
+
+int print_adr(va_list args);/*print address*/
+int print_r13(va_list args);/*print rot13 of input str*/
+
 /*printf main*/
 int _printf(const char *format, ...);
 #endif /*MAIN_H*/
