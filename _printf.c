@@ -30,9 +30,9 @@ int _printf(const char *format, ...)
 			p_fun = get_fun(*p); /*print_fun call*/
 			if (p_fun)
 			{
-				chars_printed += p_fun(args); /*increment based on fun*/
+				chars_printed += p_fun(args); /*increment based on selected func*/
 			}
-			else
+			else /*test correct outputs later*/
 			{
 				_putchar('%');
 				_putchar(*p);
