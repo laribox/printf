@@ -45,10 +45,10 @@ int print_adr(va_list args)/*prototype to be coded*/
 
 	adr = va_arg(args, unsigned int);
 	i = 0;
-	
+
 	s = convert(adr, 16, 0); /*convert address to hex*/
 	if (s == NULL)
-		return(_puts("(nil)"));
+		return (_puts("(nil)"));
 
 
 	i += _puts("0x");
