@@ -18,6 +18,12 @@ typedef struct format
 	int (*f)(va_list);
 } s_id;
 
+typedef struct arguments
+{
+	va_list args;
+	char flags;
+} func_arg;
+
 /*Functions*/
 /*Callers*/
 int (*get_fun(char c))(va_list);
