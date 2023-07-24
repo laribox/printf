@@ -40,9 +40,9 @@ int print_r13(va_list args)
 int print_adr(va_list args)/*prototype to be coded*/
 {
 	int i;
-	
+
 	i = 0;
-	
+
 	i += _puts("0x");
 	i = print_x(args); /*convert address to hex*/
 
