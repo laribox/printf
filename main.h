@@ -16,7 +16,6 @@
 typedef struct arguments
 {
 	va_list args;
-	char flags;
 } func_args;
 
 /**
