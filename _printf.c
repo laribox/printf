@@ -30,6 +30,7 @@ int _printf(const char *format, ...)
 			p_fun = get_fun(*p); /*print_fun call*/
 			if (p_fun)
 			{
+
 				chars_printed += p_fun(f_args); /*increment based on selected func*/
 			}
 			else /*test correct outputs later*/
@@ -45,6 +46,8 @@ int _printf(const char *format, ...)
 			chars_printed++;
 		}
 	}
+
 	va_end(f_args.args);
+
 	return (chars_printed);
 }

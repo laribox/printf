@@ -5,9 +5,11 @@
  * @args: passed char -> promoted to int
  * Return: length of output
  */
+
 int print_c(func_args f_args)
 {
 	_putchar(va_arg(f_args.args, int));
+
 	return (1);
 }
 /**
@@ -15,6 +17,7 @@ int print_c(func_args f_args)
  * @args: passed string
  * Return: length of output
  */
+
 int print_s(func_args f_args)
 {
 	char *s;
@@ -39,6 +42,7 @@ int print_s(func_args f_args)
  * @args: passed '%'
  * Return: length of output
  */
+
 int print_percent(func_args f_args)
 {
 	(void)f_args;

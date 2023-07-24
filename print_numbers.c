@@ -4,6 +4,7 @@
 
 /**
  * print_d - print decimal or integer
+
  * @f_args: passed integer
  * Return: length of printed int
  */
@@ -14,7 +15,9 @@ int print_d(func_args f_args)
 	int chars_printed;
 
 	chars_printed = 0;
+
 	num = va_arg(f_args.args, int);
+
 	if (num < 0)
 	{
 		chars_printed += _putchar('-');
@@ -66,12 +69,14 @@ int digit_printer(int num)
  * @args: passed integer
  * Return: length of printed binary
  */
+
 int print_b(func_args f_args)
 {
 	unsigned int num;
 	int i, j;
 	/* Stores binary representation of number.*/
 	int binaryNum[32]; /* Assuming 32 bit integer.*/
+
 
 	num = va_arg(f_args.args, unsigned int);
 	if (num == 0)

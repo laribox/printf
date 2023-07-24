@@ -88,4 +88,5 @@ int print_X(func_args f_args)
 	chars_printed += _puts(s);
 
 	return (chars_printed);
+
 }
