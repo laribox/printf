@@ -40,19 +40,11 @@ int print_r13(va_list args)
 int print_adr(va_list args)/*prototype to be coded*/
 {
 	int i;
-	char *s;
-	unsigned int adr;
-
-	adr = va_arg(args, unsigned int);
+	
 	i = 0;
-
-	s = convert(adr, 16, 0); /*convert address to hex*/
-	if (s == NULL)
-		return (_puts("(nil)"));
-
-
+	
 	i += _puts("0x");
-	i += _puts(s);
+	i = print_x(args); /*convert address to hex*/
 
 	return (i); /*counter for printed chars*/
 }

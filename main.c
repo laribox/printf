@@ -12,8 +12,6 @@ int main(void)
 {
     int len;
     int len2;
-    int std;
-    int ours;
     unsigned int ui;
     void *addr;
     int n1;
@@ -24,47 +22,10 @@ int main(void)
 
 
 
-    len = _printf("Let's try to printf a simple sentence.\n");
-    len2 = printf("Let's try to printf a simple sentence.\n");
     ui = (unsigned int)INT_MAX + 1024;
     addr = (void *)0x7ffe637541f0;
-    _printf("Length:[%d, %i]\n", len, len);
-    printf("Length:[%d, %i], [%d, %i]\n", len2, len2, len, len);
-    _printf("Negative:[%d]\n", -762534);
-    printf("Negative:[%d]\n", -762534);
-    _printf("Unsigned:[%u]\n", ui);
-    printf("Unsigned:[%u]\n", ui);
-    _printf("Unsigned octal:[%o]\n", ui);
-    printf("Unsigned octal:[%o]\n", ui);
     _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
     printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-    _printf("empty Character:[%c]\n", ' ');
-    printf("empty Character:[%c]\n", ' ');
-    _printf("Character:[%c]\n", 'H');
-    printf("Character:[%c]\n", 'H');
-    _printf("Character:[%c%c]\n", 'H', 'I');
-    printf("Character:[%c%c]\n", 'H', 'I');
-    _printf("Character:[%c%c%c]\n", 'H', 'I', '!');
-    printf("Character:[%c%c%c]\n", 'H', 'I', '!');
-
-    _printf("Character:[%c %c %c]\n", 'H', 'I', '!');
-    printf("Character:[%c %c %c]\n", 'H', 'I', '!');
-    _printf("Two c with Space:[%c %c]\n", 'H', 'I');
-    printf("Two c with Space:[%c %c]\n", 'H', 'I');
-    _printf("empty String:[%s]\n", "");
-    printf("empty String:[%s]\n", "");
-    _printf("Space String:[%s]\n", " ");
-    printf("Space String:[%s]\n", " ");
-    _printf("String:[%s]\n", "I am a string !");
-    printf("String:[%s]\n", "I am a string !");
-    _printf("String:[%s%s]\n", "I am a string !", "second string !");
-
-    std = printf("String:[%s%s]\n", "I am a string !", "second string !");
-    ours = _printf("String:[%s%s]\n", "I am a string !", "second string !");
-    printf("Length:[%d, %i]\n", std, ours);
-
-    printf("String:[%s %s]\n", "I am a string !", "second string !");
-    
       _printf("Address:[%p]\n", addr);
     printf("Address:[%p]\n", addr);
     

@@ -44,25 +44,13 @@ int print_u(va_list args)
 int print_o(va_list args)
 {
 	unsigned int num;
-	int i, j;
-
-	int binaryNum[20]; /* Sufficient to hold 64-bit octal representation.*/
+	char *s;
+	int i = 0;
 
 	num = va_arg(args, unsigned int);
-	if (num == 0)
-	{
-		_putchar('0');
-		return (1);
-	}
-	for (i = 0; num > 0; i++)
-	{
-		binaryNum[i] = num % 8;
-		num /= 8;
-	}
+	s = convert(num, 8, 0);
 
-	/* Printing array in reverse order.*/
-	for (j = i - 1; j >= 0; j--)
-		_putchar('0' +  binaryNum[j]);
+	i += _puts(s);
 
 	return (i);
 }
