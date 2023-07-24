@@ -44,7 +44,7 @@ int print_adr(func_args f_args)/*prototype to be coded*/
 	unsigned long int address;
 
 	i = 0;
-	address = va_arg(args, unsigned long int);
+	address = va_arg(f_args.args, unsigned long int);
 
 	if (address == 0)
 		return (_puts("(NULL)"));
