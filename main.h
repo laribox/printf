@@ -43,7 +43,7 @@ char *convert(unsigned long int n, int base, int cas);
 /*conversions*/
 
 /*handle binary file print_numbers*/
-int print_b(va_list args;)
+int print_b(va_list args);
 
 /*handle octal file task3_functions*/
 int print_o(va_list args);
