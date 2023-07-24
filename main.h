@@ -9,7 +9,7 @@
 
 /**
  * struct format - list of type specifiers/modifying function
- * @c: specifier char
+ * @c: Specifier char
  * @f: ptr to operation fn
  */
 typedef struct format
