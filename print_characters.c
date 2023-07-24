@@ -5,9 +5,11 @@
  * @args: passed char -> promoted to int
  * Return: length of output
  */
-int print_c(va_list args)
+
+int print_c(func_args f_args)
 {
-	_putchar(va_arg(args, int));
+	_putchar(va_arg(f_args.args, int));
+
 	return (1);
 }
 /**
@@ -15,12 +17,13 @@ int print_c(va_list args)
  * @args: passed string
  * Return: length of output
  */
-int print_s(va_list args)
+
+int print_s(func_args f_args)
 {
 	char *s;
 	int chars_printed;
 
-	s = va_arg(args, char *); /*assign the varadiac argument to s*/
+	s = va_arg(f_args.args, char *); /*assign the varadiac argument to s*/
 
 	if (!s) /*check s != NULL*/
 		s = "(null)";
@@ -39,8 +42,9 @@ int print_s(va_list args)
  * @args: passed '%'
  * Return: length of output
  */
-int print_percent(va_list args)
+
+int print_percent(func_args f_args)
 {
-	(void)args;
+	(void)f_args;
 	return (_putchar('%'));
 }
