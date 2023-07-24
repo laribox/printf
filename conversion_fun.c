@@ -8,7 +8,7 @@
 int print_u(va_list args)
 {
 	unsigned int num;
-	unsigned long long int div, dig;
+	unsigned long int div, dig;
         int chars_printed;
  
         chars_printed = 0;
