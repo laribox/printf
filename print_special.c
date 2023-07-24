@@ -48,3 +48,31 @@ int print_adr(va_list args)/*prototype to be coded*/
 
 	return (i); /*counter for printed chars*/
 }
+
+/**
+ * print_rev - reverse a string then prints it
+ * @args: input str
+ * Return: chars_printed
+ */
+int print_rev(va_list args)
+{
+	char *s;
+	char *p;
+	int chars_printed;
+
+	s = va_arg(args, char *);
+	p = s;
+
+	chars_printed = 0;
+
+	while (*p != '\0')/*mv s to the end of str*/
+		p++;
+	p--; /*ignores '\0'*/
+
+	while (p >= s) /*print p until == s[0]*/
+	{
+		chars_printed += _putchar(*p);
+		p--;
+	}
+	return (chars_printed);
+}
