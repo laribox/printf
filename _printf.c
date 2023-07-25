@@ -49,6 +49,8 @@ int print_helper(const char *format, va_list args)
 			p++;
 			while (get_flags(*p, &f)) /*check for flag and increment*/
 				p++;
+			while (get_length(*p, &len)) /*check for flag and increment*/
+				p++;
 			p_fun = get_fun(*p); /*print_fun call*/
 			if (p_fun)
 			{
