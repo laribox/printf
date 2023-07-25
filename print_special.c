@@ -4,9 +4,13 @@
  * print_r13 - Print rot 13 version of input
  * @args: input str
  * @f: pointer to the flag struct
+ * @len: pointer to the flag struct
+ * @width: pointer to the flag struct
+ * @precision: pointer to the flag struct
  * Return: number of printed chars
  */
-int print_r13(va_list args, flag *f, length_mod *len , char* width, char *precision)
+int print_r13(va_list args, flag *f, length_mod *len,
+		char *width, char *precision)
 {
 	char *s;
 	int i, j;
@@ -42,9 +46,13 @@ int print_r13(va_list args, flag *f, length_mod *len , char* width, char *precis
  * print_adr - print a variables adress
  * @args: input variable
  * @f: pointer to the flag struct
+* @len: pointer to the flag struct
+* @width: pointer to the flag struct
+* @precision: pointer to the flag struct
  * Return: num of printed chars
  */
-int print_adr(va_list args, flag *f, length_mod *len , char* width, char *precision)
+int print_adr(va_list args, flag *f, length_mod *len,
+		char *width, char *precision)
 {
 	int i;
 	char *s;
@@ -73,9 +81,13 @@ int print_adr(va_list args, flag *f, length_mod *len , char* width, char *precis
  * print_rev - reverse a string then prints it
  * @args: input str
  * @f: pointer to the flag struct
+* @len: pointer to the flag struct
+* @width: pointer to the flag struct
+* @precision: pointer to the flag struct
  * Return: chars_printed
  */
-int print_rev(va_list args, flag *f, length_mod *len , char* width, char *precision)
+int print_rev(va_list args, flag *f, length_mod *len,
+		char *width, char *precision)
 {
 	char *s;
 	char *p;
@@ -106,9 +118,13 @@ int print_rev(va_list args, flag *f, length_mod *len , char* width, char *precis
  * print_exc - print exclusive str
  * @args: passed str
  * @f: pointer to the flag struct
+* @len: pointer to the flag struct
+* @width: pointer to the flag struct
+* @precision: pointer to the flag struct
  * Return: chars_printed
  */
-int print_exc(va_list args, flag *f, length_mod *len , char* width, char *precision)
+int print_exc(va_list args, flag *f, length_mod *len,
+		char *width, char *precision)
 {
 	char *s, *p;
 	int chars_printed, i;

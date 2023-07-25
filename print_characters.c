@@ -4,9 +4,13 @@
  * print_c - Print single char
  * @args: passed char -> promoted to int
  * @f: pointer to the flag struct
+ * @len: pointer to the flag struct
+ * @width: pointer to the flag struct
+ * @precision: pointer to the flag struct
  * Return: length of output
  */
-int print_c(va_list args, flag *f, length_mod *len , char* width, char *precision)
+int print_c(va_list args, flag *f, length_mod *len,
+		char *width, char *precision)
 {
 	(void)f;
 	(void)len;
@@ -20,9 +24,13 @@ int print_c(va_list args, flag *f, length_mod *len , char* width, char *precisio
  * print_s - print string
  * @args: passed string
  * @f: pointer to the flag struct
+ * @len: pointer to the flag struct
+ * @width: pointer to the flag struct
+ * @precision: pointer to the flag struct
  * Return: length of output
  */
-int print_s(va_list args, flag *f, length_mod *len , char* width, char *precision)
+int print_s(va_list args, flag *f, length_mod *len,
+		char *width, char *precision)
 {
 	char *s;
 	int chars_printed;
@@ -50,9 +58,13 @@ int print_s(va_list args, flag *f, length_mod *len , char* width, char *precisio
  * print_percent - print '%'
  * @args: passed '%'
  * @f: pointer to the flag struct
+ * @len: pointer to the flag struct
+ * @width: pointer to the flag struct
+ * @precision: pointer to the flag struct
  * Return: length of output
  */
-int print_percent(va_list args, flag *f, length_mod *len , char* width, char *precision)
+int print_percent(va_list args, flag *f, length_mod *len,
+		char *width, char *precision)
 {
 	(void)f;
 	(void)args;
