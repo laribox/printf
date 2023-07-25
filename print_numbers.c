@@ -16,11 +16,11 @@ int print_d(va_list args, flag *f, length_mod *len,
 {
 	int num;
 	int chars_printed;
-	
+
 	(void)len;
 	(void)width;
 	(void)precision;
-	
+
 	chars_printed = 0;
 	num = va_arg(args, int);
 
