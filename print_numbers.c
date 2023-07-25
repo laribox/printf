@@ -69,28 +69,10 @@ int digit_printer(int num)
 int print_u(va_list args)
 {
 	unsigned int num;
-	unsigned long int div, dig;
-	int chars_printed;
+	char *s;	
 
-	chars_printed = 0;
 	num = va_arg(args, unsigned int);
+	s = convert(num, 10, 0);
 
-	if (num == 0)
-	{
-		_putchar('0');
-		chars_printed++;
-	}
-
-	div = 1;
-	while (num / div > 9)
-		div *= 10;
-
-	while (div > 0)
-	{
-		dig = num / div;
-		chars_printed += _putchar('0' + dig);
-		num %= div;
-		div /= 10;
-	}
-	return (chars_printed);
+	return (_puts(s));
 }

@@ -17,12 +17,28 @@ typedef struct format
 	char c;
 	int (*f)(va_list);
 } s_id;
-
-typedef struct arguments
+/**
+ * struct flag - check for flag
+ * @plus: +
+ * @space: ' '
+ * @hash: #
+ */
+typedef struct flags
 {
-	va_list args;
-	char flags;
-} func_arg;
+	int plus;
+	int space;
+	int hash;
+} flag;
+/**
+ * struct modifier - check lenght mods
+ * @h: convert to short
+ * @l: convert to long
+ */
+typedef struct modifiers
+{
+	int h;
+	int l;
+}mod;
 
 /*Functions*/
 /*Callers*/
@@ -41,8 +57,8 @@ int print_percent(va_list args);/*handle '%'*/
 /*number*/
 int print_d(va_list args);/*handle dig & int*/
 int digit_printer(int num);/*solve the int_max issue(print number)*/
-
-
+/*handle unsigned int*/
+int print_u(va_list args);
 
 /*base-conversion*/
 char *convert(unsigned long int n, int base, int cas);
@@ -60,9 +76,6 @@ int print_x(va_list args);
 
 /*handle Unsigned hexadecimal integer upercase file task3_functions*/
 int print_X(va_list args);
-
-/*handle unsigned int file task3_functions*/
-int print_u(va_list args);
 
 
 
