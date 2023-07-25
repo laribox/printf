@@ -29,7 +29,7 @@ int print_d(va_list args)
  * @num: input number
  * Return: print count
  */
-int digit_printer(int num)
+void digit_printer(int num)
 {
 	unsigned int x;
 
@@ -45,7 +45,6 @@ int digit_printer(int num)
 		digit_printer(x / 10); /*recursion loop*/
 
 	_putchar((x % 10) + '0'); /*print 1 dig*/
-
 }
 /**
  * count_digit - counts the number of digits of a number

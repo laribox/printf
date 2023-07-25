@@ -56,7 +56,9 @@ int print_percent(va_list args);/*handle '%'*/
 
 /*number*/
 int print_d(va_list args);/*handle dig & int*/
-int digit_printer(int num);/*solve the int_max issue(print number)*/
+void digit_printer(int num);/*solve the int_max issue(print number)*/
+/*number counter*/
+int count_digit(int num);
 /*handle unsigned int*/
 int print_u(va_list args);
 
