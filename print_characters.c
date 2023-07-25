@@ -3,6 +3,7 @@
 /**
  * print_c - Print single char
  * @args: passed char -> promoted to int
+ * @f: pointer to the flag struct
  * Return: length of output
  */
 int print_c(va_list args, flag *f)
@@ -15,6 +16,7 @@ int print_c(va_list args, flag *f)
 /**
  * print_s - print string
  * @args: passed string
+ * @f: pointer to the flag struct
  * Return: length of output
  */
 int print_s(va_list args, flag *f)
@@ -41,6 +43,7 @@ int print_s(va_list args, flag *f)
 /**
  * print_percent - print '%'
  * @args: passed '%'
+ * @f: pointer to the flag struct
  * Return: length of output
  */
 int print_percent(va_list args, flag *f)

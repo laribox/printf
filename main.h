@@ -28,7 +28,7 @@ typedef struct modifiers
 {
 	int h;
 	int l;
-}mod;
+} mod;
 /**
  * struct format - list of type specifiers/modifying function
  * @c: Specifier char
