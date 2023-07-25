@@ -8,27 +8,12 @@
 int print_b(va_list args)
 {
 	unsigned int num;
-	int i, j;
-	/* Stores binary representation of number.*/
-	int binaryNum[32]; /* Assuming 32 bit integer.*/
+	char *s;
 
 	num = va_arg(args, unsigned int);
-	if (num == 0)
-	{
-		_putchar('0');
-		return (1);
-	}
-	for (i = 0; num > 0; i++)
-	{
-		binaryNum[i] = num % 2;
-		num /= 2;
-	}
+	s = convert(num, 2, 0);
 
-	/* Printing array in reverse order.*/
-	for (j = i - 1; j >= 0; j--)
-		_putchar('0' +  binaryNum[j]);
-
-	return (i);
+	return (_puts(s));
 }
 
 
@@ -41,11 +26,11 @@ int print_b(va_list args)
 */
 int print_o(va_list args)
 {
-unsigned long int num;
+unsigned int num;
 char *s;
 int i = 0;
 
-num = va_arg(args, unsigned long int);
+num = va_arg(args, unsigned int);
 s = convert(num, 8, 0);
 
 i += _puts(s);
@@ -60,7 +45,7 @@ return (i);
 */
 int print_x(va_list args)
 {
-unsigned long int num = va_arg(args, unsigned long int);
+unsigned int num = va_arg(args, unsigned int);
 int chars_printed = 0;
 char *s;
 
@@ -77,7 +62,7 @@ return (chars_printed);
 */
 int print_X(va_list args)
 {
-unsigned long int num = va_arg(args, unsigned long int);
+unsigned int num = va_arg(args, unsigned int);
 int chars_printed = 0;
 char *s;
 
