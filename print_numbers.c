@@ -15,7 +15,12 @@ int print_d(va_list args)
 	chars_printed = 0;
 	num = va_arg(args, int);
 
-	chars_printed += digit_printer(num);
+	chars_printed += count_digit(num);/*counts digit number*/
+
+	if (num < 0)
+		chars_printed++;
+
+	digit_printer(num);
 
 	return (chars_printed);
 }
@@ -27,12 +32,10 @@ int print_d(va_list args)
 int digit_printer(int num)
 {
 	unsigned int x;
-	int chars_printed;
 
-	chars_printed = 0;
 	if (num < 0)
 	{
-		chars_printed += _putchar('-');
+		_putchar('-');
 		x = -num;
 	}
 	else
@@ -41,11 +44,31 @@ int digit_printer(int num)
 	if (x / 10)
 		digit_printer(x / 10); /*recursion loop*/
 
-	chars_printed += _putchar((x % 10) + '0'); /*print 1 dig*/
+	_putchar((x % 10) + '0'); /*print 1 dig*/
 
-	return (chars_printed);
 }
+/**
+ * count_digit - counts the number of digits of a number
+ * @num: the number to count
+ *
+ * Return: the number of digits
+ */
+int count_digit(int num)
+{
+	unsigned int count = 0;
+	unsigned int n1;
 
+	if (num < 0)
+		n1 = num * -1;
+	else
+		n1 = num;
+	while (n1 != 0)
+	{
+		n1 /= 10;
+		count++;
+	}
+	return (count++);
+}
 /**
 * print_u - Print unsigned int
 * @args: passed integer
