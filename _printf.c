@@ -16,22 +16,18 @@ int _printf(const char *format, ...)
 	flag f = {0, 0, 0};
 
 	va_start(args, format);
-
 	if (!format || (format[0] == '%' && !format[1]))/*edge cases*/
 		return (-1);
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
-
 	chars_printed = 0;
 	for (p = format; *p != '\0'; p++) /*loop input str*/
 	{
 		if (*p == '%') /*specifier check*/
 		{
 			p++;
-
 			while (get_flags(*p, &f))/*check for flag and incrmnt*/
 				p++;
-
 			p_fun = get_fun(*p); /*print_fun call*/
 			if (p_fun)
 			{
