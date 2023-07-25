@@ -38,8 +38,9 @@ int print_helper(const char *format, va_list args)
 {
     int chars_printed = 0;
     const char *p;
-    int (*p_fun)(va_list, flag *);
+    int (*p_fun)(va_list, flag *, length_mod *len , char* width, char *precision);
     flag f = {0, 0, 0};
+    length_mod len ={0, 0};
 
     for (p = format; *p != '\0'; p++) /*loop input str*/
     {
@@ -51,7 +52,7 @@ int print_helper(const char *format, va_list args)
             p_fun = get_fun(*p); /*print_fun call*/
             if (p_fun)
             {
-                chars_printed += p_fun(args, &f); /*increment based on selected func*/
+                chars_printed += p_fun(args, &f, &len, "", ""); /*increment based on selected func*/
             }
             else /*test correct outputs later*/
             {
