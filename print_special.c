@@ -5,12 +5,14 @@
  * @args: input str
  * Return: number of printed chars
  */
-int print_r13(va_list args)
+int print_r13(va_list args, flag *f)
 {
 	char *s;
 	int i, j;
 	char alpha[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+	(void)f;
 
 	s = va_arg(args, char *);
 
@@ -37,11 +39,13 @@ int print_r13(va_list args)
  * @args: input variable
  * Return: num of printed chars
  */
-int print_adr(va_list args)
+int print_adr(va_list args, flag *f)
 {
 	int i;
 	char *s;
 	unsigned long int address;
+
+	(void)f;
 
 	i = 0;
 	address = va_arg(args, unsigned long int);
@@ -62,11 +66,13 @@ int print_adr(va_list args)
  * @args: input str
  * Return: chars_printed
  */
-int print_rev(va_list args)
+int print_rev(va_list args, flag *f)
 {
 	char *s;
 	char *p;
 	int chars_printed;
+
+	(void)f;
 
 	s = va_arg(args, char *);
 	p = s;
@@ -89,10 +95,12 @@ int print_rev(va_list args)
  * @args: passed str
  * Return: chars_printed
  */
-int print_exc(va_list args)
+int print_exc(va_list args, flag *f)
 {
 	char *s, *p;
 	int chars_printed, i;
+
+	(void)f;
 
 	s = va_arg(args, char *);
 

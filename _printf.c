@@ -12,7 +12,8 @@ int _printf(const char *format, ...)
 	va_list args;
 	int chars_printed;
 	const char *p;
-	int (*p_fun)(va_list);
+	int (*p_fun)(va_list, flag *);
+	flag f = {0, 0, 0};
 
 	va_start(args, format);
 
@@ -27,11 +28,14 @@ int _printf(const char *format, ...)
 		if (*p == '%') /*specifier check*/
 		{
 			p++;
-			p_fun = get_fun(*p); /*print_fun call*/
 
+			while (get_flags(*p, &f))/*check for flag and incrmnt*/
+				p++;
+
+			p_fun = get_fun(*p); /*print_fun call*/
 			if (p_fun)
 			{
-				chars_printed += p_fun(args); /*increment based on selected func*/
+				chars_printed += p_fun(args, &f); /*increment based on selected func*/
 			}
 			else /*test correct outputs later*/
 			{

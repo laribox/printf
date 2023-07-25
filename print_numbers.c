@@ -7,13 +7,18 @@
  * @args: passed integer
  * Return: length of printed int
  */
-int print_d(va_list args)
+int print_d(va_list args, flag *f)
 {
 	int num;
 	int chars_printed;
 
 	chars_printed = 0;
 	num = va_arg(args, int);
+
+	if (f->space == 1 && f->plus == 0 && num >= 0)
+		chars_printed += _putchar(' ');
+	if (f->plus == 1 && num >= 0)
+		chars_printed += _putchar('+');
 
 	chars_printed += count_digit(num);/*counts digit number*/
 
@@ -73,10 +78,12 @@ int count_digit(int num)
 * @args: passed integer
 * Return: length of printed unsigned int
 */
-int print_u(va_list args)
+int print_u(va_list args, flag *f)
 {
 	unsigned int num;
 	char *s;	
+
+	(void)f;
 
 	num = va_arg(args, unsigned int);
 	s = convert(num, 10, 0);
