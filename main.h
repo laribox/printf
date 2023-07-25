@@ -28,7 +28,9 @@ typedef struct modifiers
 {
 	int h;
 	int l;
-} mod;
+} length_mod;
+
+
 /**
  * struct format - list of type specifiers/modifying function
  * @c: Specifier char
@@ -53,22 +55,22 @@ int _puts(char *s);
 /*charachters*/
 
 /*handle char*/
-int print_c(va_list args, flag *f);
+int print_c(va_list args, flag *f, length_mod *len , char* width, char *precision);
 /*handle str*/
-int print_s(va_list args, flag *f);
+int print_s(va_list args, flag *f, length_mod *len , char* width, char *precision);
 /*handle '%'*/
-int print_percent(va_list args, flag *f);
+int print_percent(va_list args, flag *f, length_mod *len , char* width, char *precision);
 
 /*number*/
 
 /*handle dig & int*/
-int print_d(va_list args, flag *f);
+int print_d(va_list args, flag *f, length_mod *len , char* width, char *precision);
 /*solve the int_max issue(print number)*/
 void digit_printer(int num);
 /*number counter*/
 int count_digit(int num);
 /*handle unsigned int*/
-int print_u(va_list args, flag *f);
+int print_u(va_list args, flag *f, length_mod *len , char* width, char *precision);
 
 /*base-conversion*/
 char *convert(unsigned long int n, int base, int cas);
@@ -76,30 +78,30 @@ char *convert(unsigned long int n, int base, int cas);
 /*conversions*/
 
 /*handle binary file print_numbers*/
-int print_b(va_list args, flag *f);
+int print_b(va_list args, flag *f, length_mod *len , char* width, char *precision);
 
 /*handle octal file task3_functions*/
-int print_o(va_list args, flag *f);
+int print_o(va_list args, flag *f, length_mod *len , char* width, char *precision);
 
 /*handle Unsigned hexadecimal integer file task3_functions*/
-int print_x(va_list args, flag *f);
+int print_x(va_list args, flag *f, length_mod *len , char* width, char *precision);
 
 /*handle Unsigned hexadecimal integer upercase file task3_functions*/
-int print_X(va_list args, flag *f);
+int print_X(va_list args, flag *f, length_mod *len , char* width, char *precision);
 
 /*special string manipulation*/
 
 /*print address*/
-int print_adr(va_list args, flag *f);
+int print_adr(va_list args, flag *f, length_mod *len , char* width, char *precision);
 
 /*print rot13 of input str*/
-int print_r13(va_list args, flag *f);
+int print_r13(va_list args, flag *f, length_mod *len , char* width, char *precision);
 
 /*print reversed str*/
-int print_rev(va_list args, flag *f);
+int print_rev(va_list args, flag *f, length_mod *len , char* width, char *precision);
 
 /*print exclusive str*/
-int print_exc(va_list args, flag *f);
+int print_exc(va_list args, flag *f, length_mod *len , char* width, char *precision);
 
 /*flags && mods*/
 int get_flags(char s, flag *f);
