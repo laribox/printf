@@ -28,16 +28,16 @@ int print_b(va_list args, flag *f, length_mod *len,
 
 
 /**
-* print_o - print octal of unsigned int
-* @args: passed integer
-* @f: pointer to the flag struct
-* @len: pointer to the flag struct
-* @width: pointer to the flag struct
-* @precision: pointer to the flag struct
-* Return: length of printed binary
-* Description: to calculate octal we divide by 8
-* and take the reminder and repeter
-*/
+ * print_o - print octal of unsigned int
+ * @args: passed integer
+ * @f: pointer to the flag struct
+ * @len: pointer to the flag struct
+ * @width: pointer to the flag struct
+ * @precision: pointer to the flag struct
+ * Return: length of printed binary
+ * Description: to calculate octal we divide by 8
+ * and take the reminder and repeter
+ */
 int print_o(va_list args, flag *f, length_mod *len,
 		char *width, char *precision)
 {
@@ -45,9 +45,13 @@ int print_o(va_list args, flag *f, length_mod *len,
 	char *s;
 	int i = 0;
 
-	(void)len;
 	(void)width;
 	(void)precision;
+
+	if (len->h == 1)
+		num = (unsigned short)num;
+	if (len->l == 1)
+		num = (unsigned long)num;
 
 	num = va_arg(args, unsigned int);
 	s = convert(num, 8, 0);
@@ -60,14 +64,14 @@ int print_o(va_list args, flag *f, length_mod *len,
 }
 
 /**
-* print_x - print hexadecimal (lowercase)
-* @args: passed unsigned int
-* @f: pointer to the flag struct
-* @len: pointer to the flag struct
-* @width: pointer to the flag struct
-* @precision: pointer to the flag struct
-* Return: length of printed hexadecimal string
-*/
+ * print_x - print hexadecimal (lowercase)
+ * @args: passed unsigned int
+ * @f: pointer to the flag struct
+ * @len: pointer to the flag struct
+ * @width: pointer to the flag struct
+ * @precision: pointer to the flag struct
+ * Return: length of printed hexadecimal string
+ */
 int print_x(va_list args, flag *f, length_mod *len,
 		char *width, char *precision)
 {
@@ -75,9 +79,13 @@ int print_x(va_list args, flag *f, length_mod *len,
 	int chars_printed = 0;
 	char *s;
 
-	(void)len;
 	(void)width;
 	(void)precision;
+
+	if (len->h == 1)
+		num = (unsigned short)num;
+	if (len->l == 1)
+		num = (unsigned long)num;
 
 	s = convert(num, 16, 0);
 
@@ -90,14 +98,14 @@ int print_x(va_list args, flag *f, length_mod *len,
 }
 
 /**
-* print_X - print hexadecimal (uppercase)
-* @args: passed unsigned int
-* @f: pointer to the flag struct
-* @len: pointer to the flag struct
-* @width: pointer to the flag struct
-* @precision: pointer to the flag struct
-* Return: length of printed hexadecimal string
-*/
+ * print_X - print hexadecimal (uppercase)
+ * @args: passed unsigned int
+ * @f: pointer to the flag struct
+ * @len: pointer to the flag struct
+ * @width: pointer to the flag struct
+ * @precision: pointer to the flag struct
+ * Return: length of printed hexadecimal string
+ */
 int print_X(va_list args, flag *f, length_mod *len,
 		char *width, char *precision)
 {
@@ -105,9 +113,13 @@ int print_X(va_list args, flag *f, length_mod *len,
 	int chars_printed = 0;
 	char *s;
 
-	(void)len;
 	(void)width;
 	(void)precision;
+
+	if (len->h == 1)
+		num = (unsigned short)num;
+	if (len->l == 1)
+		num = (unsigned long)num;
 
 	s = convert(num, 16, 1);
 
