@@ -106,4 +106,6 @@ int get_flags(char s, flag *f);
 
 /*printf main*/
 int _printf(const char *format, ...);
+
+int print_helper(const char *format, va_list args);
 #endif /*MAIN_H*/
