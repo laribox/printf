@@ -5,7 +5,7 @@
  * @c: passed specifier
  * Return: ptr to desired fn
  */
-int (*get_fun(char c))(va_list, flag *f)
+int (*get_fun(char c))(va_list, flag *)
 {
 	s_id spec_ptr[] = {
 		{'c', print_c},

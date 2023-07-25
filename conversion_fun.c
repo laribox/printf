@@ -3,6 +3,7 @@
 /**
  * print_b - print binary on insigned int
  * @args: passed integer
+ * @f: pointer to the flag struct
  * Return: length of printed binary
  */
 int print_b(va_list args, flag *f)
@@ -22,6 +23,7 @@ int print_b(va_list args, flag *f)
 /**
 * print_o - print octal of unsigned int
 * @args: passed integer
+* @f: pointer to the flag struct
 * Return: length of printed binary
 * Description: to calculate octal we divide by 8
 * and take the reminder and repeter
@@ -45,6 +47,7 @@ return (i);
 /**
 * print_x - print hexadecimal (lowercase)
 * @args: passed unsigned int
+* @f: pointer to the flag struct
 * Return: length of printed hexadecimal string
 */
 int print_x(va_list args, flag *f)
@@ -64,6 +67,7 @@ return (chars_printed);
 /**
 * print_X - print hexadecimal (uppercase)
 * @args: passed unsigned int
+* @f: pointer to the flag struct
 * Return: length of printed hexadecimal string
 */
 int print_X(va_list args, flag *f)

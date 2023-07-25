@@ -3,6 +3,7 @@
 /**
  * print_r13 - Print rot 13 version of input
  * @args: input str
+ * @f: pointer to the flag struct
  * Return: number of printed chars
  */
 int print_r13(va_list args, flag *f)
@@ -37,6 +38,7 @@ int print_r13(va_list args, flag *f)
 /**
  * print_adr - print a variables adress
  * @args: input variable
+ * @f: pointer to the flag struct
  * Return: num of printed chars
  */
 int print_adr(va_list args, flag *f)
@@ -64,6 +66,7 @@ int print_adr(va_list args, flag *f)
 /**
  * print_rev - reverse a string then prints it
  * @args: input str
+ * @f: pointer to the flag struct
  * Return: chars_printed
  */
 int print_rev(va_list args, flag *f)
@@ -93,6 +96,7 @@ int print_rev(va_list args, flag *f)
 /**
  * print_exc - print exclusive str
  * @args: passed str
+ * @f: pointer to the flag struct
  * Return: chars_printed
  */
 int print_exc(va_list args, flag *f)

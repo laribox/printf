@@ -5,6 +5,7 @@
 /**
  * print_d - Print decimal or integer
  * @args: passed integer
+ * @f: pointer to the flag struct
  * Return: length of printed int
  */
 int print_d(va_list args, flag *f)
@@ -32,6 +33,7 @@ int print_d(va_list args, flag *f)
 /**
  * digit_printer - print input number by digit
  * @num: input number
+ * @f: pointer to the flag struct
  * Return: print count
  */
 void digit_printer(int num)
@@ -54,7 +56,7 @@ void digit_printer(int num)
 /**
  * count_digit - counts the number of digits of a number
  * @num: the number to count
- *
+ * @f: pointer to the flag struct
  * Return: the number of digits
  */
 int count_digit(int num)
@@ -76,12 +78,13 @@ int count_digit(int num)
 /**
 * print_u - Print unsigned int
 * @args: passed integer
+* @f: pointer to the flag struct
 * Return: length of printed unsigned int
 */
 int print_u(va_list args, flag *f)
 {
 	unsigned int num;
-	char *s;	
+	char *s;
 
 	(void)f;
 
