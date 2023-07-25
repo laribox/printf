@@ -8,7 +8,7 @@
 /*Structures*/
 
 /**
- * struct flag - check for flag
+ * struct flags - check for flag
  * @plus: +
  * @space: ' '
  * @hash: #
@@ -20,7 +20,7 @@ typedef struct flags
 	int hash;
 } flag;
 /**
- * struct modifier - check lenght mods
+ * struct modifiers - check lenght mods
  * @h: convert to short
  * @l: convert to long
  */
@@ -49,14 +49,22 @@ int _putchar(char c);
 int _puts(char *s);
 
 /*print funcs per specifiers*/
+
 /*charachters*/
-int print_c(va_list args, flag *f);/*handle char*/
-int print_s(va_list args, flag *f);/*handle str*/
-int print_percent(va_list args, flag *f);/*handle '%'*/
+
+/*handle char*/
+int print_c(va_list args, flag *f);
+/*handle str*/
+int print_s(va_list args, flag *f);
+/*handle '%'*/
+int print_percent(va_list args, flag *f);
 
 /*number*/
-int print_d(va_list args, flag *f);/*handle dig & int*/
-void digit_printer(int num);/*solve the int_max issue(print number)*/
+
+/*handle dig & int*/
+int print_d(va_list args, flag *f);
+/*solve the int_max issue(print number)*/
+void digit_printer(int num);
 /*number counter*/
 int count_digit(int num);
 /*handle unsigned int*/

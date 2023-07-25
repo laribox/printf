@@ -34,11 +34,11 @@ unsigned int num;
 char *s;
 int i = 0;
 
-(void)f;
-
 num = va_arg(args, unsigned int);
 s = convert(num, 8, 0);
 
+if (f->hash == 1 && s[0] != '0')
+		i += _putchar('0');
 i += _puts(s);
 
 return (i);
@@ -56,9 +56,11 @@ unsigned int num = va_arg(args, unsigned int);
 int chars_printed = 0;
 char *s;
 
-(void)f;
-
 s = convert(num, 16, 0);
+
+if (f->hash == 1 && s[0] != '0')
+	chars_printed += _puts("0x");
+
 chars_printed += _puts(s);
 
 return (chars_printed);
@@ -76,10 +78,10 @@ unsigned int num = va_arg(args, unsigned int);
 int chars_printed = 0;
 char *s;
 
-(void)f;
-
 s = convert(num, 16, 1);
 
+if (f->hash == 1 && s[0] != '0')
+	chars_printed += _puts("0X");
 chars_printed += _puts(s);
 
 return (chars_printed);

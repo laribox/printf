@@ -33,7 +33,6 @@ int print_d(va_list args, flag *f)
 /**
  * digit_printer - print input number by digit
  * @num: input number
- * @f: pointer to the flag struct
  * Return: print count
  */
 void digit_printer(int num)
@@ -56,7 +55,6 @@ void digit_printer(int num)
 /**
  * count_digit - counts the number of digits of a number
  * @num: the number to count
- * @f: pointer to the flag struct
  * Return: the number of digits
  */
 int count_digit(int num)
