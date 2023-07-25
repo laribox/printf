@@ -17,17 +17,20 @@ int print_d(va_list args, flag *f, length_mod *len,
 	int num;
 	int chars_printed;
 
-	(void)len;
 	(void)width;
 	(void)precision;
 
 	chars_printed = 0;
 	num = va_arg(args, int);
 
-	if (f->space == 1 && f->plus == 0 && num >= 0)
+	if (f->space == 1 && f->plus == 0 && num >= 0)/*flags*/
 		chars_printed += _putchar(' ');
 	if (f->plus == 1 && num >= 0)
 		chars_printed += _putchar('+');
+	if (len->h == 1 && num >= 0)/*len_mod*/
+		num = (short)num;
+	if (len->l == 1 && num >= 0)
+		num = (long)num;
 
 	chars_printed += count_digit(num);/*counts digit number*/
 
@@ -82,14 +85,14 @@ int count_digit(int num)
 	return (count++);
 }
 /**
-* print_u - Print unsigned int
-* @args: passed integer
-* @f: pointer to the flag struct
-* @len: pointer to the flag struct
-* @width: pointer to the flag struct
-* @precision: pointer to the flag struct
-* Return: length of printed unsigned int
-*/
+ * print_u - Print unsigned int
+ * @args: passed integer
+ * @f: pointer to the flag struct
+ * @len: pointer to the flag struct
+ * @width: pointer to the flag struct
+ * @precision: pointer to the flag struct
+ * Return: length of printed unsigned int
+ */
 int print_u(va_list args, flag *f, length_mod *len,
 		char *width, char *precision)
 {
@@ -97,11 +100,16 @@ int print_u(va_list args, flag *f, length_mod *len,
 	char *s;
 
 	(void)f;
-	(void)len;
 	(void)width;
 	(void)precision;
 
 	num = va_arg(args, unsigned int);
+
+	if (len->h == 1)
+		num = (unsigned short)num;
+	if (len->l == 1)
+		num = (unsigned long)num;
+
 	s = convert(num, 10, 0);
 
 	return (_puts(s));
