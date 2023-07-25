@@ -6,9 +6,13 @@
  * print_d - Print decimal or integer
  * @args: passed integer
  * @f: pointer to the flag struct
+* @len: pointer to the flag struct
+* @width: pointer to the flag struct
+* @precision: pointer to the flag struct
  * Return: length of printed int
  */
-int print_d(va_list args, flag *f, length_mod *len , char* width, char *precision)
+int print_d(va_list args, flag *f, length_mod *len,
+		char *width, char *precision)
 {
 	int num;
 	int chars_printed;

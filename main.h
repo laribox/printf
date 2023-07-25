@@ -39,12 +39,12 @@ typedef struct modifiers
 typedef struct format
 {
 	char c;
-	int (*f)(va_list, flag *f);
+	int (*f)(va_list, flag *f, length_mod *, char *, char *);
 } s_id;
 
 /*Functions*/
 /*Callers*/
-int (*get_fun(char c))(va_list, flag *);
+int (*get_fun(char c))(va_list, flag *, length_mod *, char *, char *);
 
 /*print a char(using write())*/
 int _putchar(char c);

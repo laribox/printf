@@ -4,9 +4,13 @@
  * print_b - print binary on insigned int
  * @args: passed integer
  * @f: pointer to the flag struct
+ * @len: pointer to the flag struct
+ * @width: pointer to the flag struct
+ * @precision: pointer to the flag struct
  * Return: length of printed binary
  */
-int print_b(va_list args, flag *f, length_mod *len , char* width, char *precision)
+int print_b(va_list args, flag *f, length_mod *len,
+		char *width, char *precision)
 {
 	unsigned int num;
 	char *s;
@@ -27,11 +31,15 @@ int print_b(va_list args, flag *f, length_mod *len , char* width, char *precisio
 * print_o - print octal of unsigned int
 * @args: passed integer
 * @f: pointer to the flag struct
+* @len: pointer to the flag struct
+* @width: pointer to the flag struct
+* @precision: pointer to the flag struct
 * Return: length of printed binary
 * Description: to calculate octal we divide by 8
 * and take the reminder and repeter
 */
-int print_o(va_list args, flag *f, length_mod *len , char* width, char *precision)
+int print_o(va_list args, flag *f, length_mod *len,
+		char *width, char *precision)
 {
 	unsigned int num;
 	char *s;
@@ -55,9 +63,13 @@ int print_o(va_list args, flag *f, length_mod *len , char* width, char *precisio
 * print_x - print hexadecimal (lowercase)
 * @args: passed unsigned int
 * @f: pointer to the flag struct
+* @len: pointer to the flag struct
+* @width: pointer to the flag struct
+* @precision: pointer to the flag struct
 * Return: length of printed hexadecimal string
 */
-int print_x(va_list args, flag *f, length_mod *len , char* width, char *precision)
+int print_x(va_list args, flag *f, length_mod *len,
+		char *width, char *precision)
 {
 	unsigned int num = va_arg(args, unsigned int);
 	int chars_printed = 0;
@@ -81,9 +93,13 @@ int print_x(va_list args, flag *f, length_mod *len , char* width, char *precisio
 * print_X - print hexadecimal (uppercase)
 * @args: passed unsigned int
 * @f: pointer to the flag struct
+* @len: pointer to the flag struct
+* @width: pointer to the flag struct
+* @precision: pointer to the flag struct
 * Return: length of printed hexadecimal string
 */
-int print_X(va_list args, flag *f, length_mod *len , char* width, char *precision)
+int print_X(va_list args, flag *f, length_mod *len,
+		char *width, char *precision)
 {
 	unsigned int num = va_arg(args, unsigned int);
 	int chars_printed = 0;
