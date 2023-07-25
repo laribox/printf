@@ -47,7 +47,7 @@ int print_adr(va_list args)
 	address = va_arg(args, unsigned long int);
 
 	if (address == 0)
-		return (_puts("(NULL)"));
+		return (_puts("(nil)"));
 
 	s = convert(address, 16, 0);
 

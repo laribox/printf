@@ -43,11 +43,11 @@ int print_u(va_list args)
 */
 int print_o(va_list args)
 {
-unsigned int num;
+unsigned long int num;
 char *s;
 int i = 0;
 
-num = va_arg(args, unsigned int);
+num = va_arg(args, unsigned long int);
 s = convert(num, 8, 0);
 
 i += _puts(s);
@@ -62,7 +62,7 @@ return (i);
 */
 int print_x(va_list args)
 {
-unsigned int num = va_arg(args, unsigned int);
+unsigned long int num = va_arg(args, unsigned long int);
 int chars_printed = 0;
 char *s;
 
@@ -79,7 +79,7 @@ return (chars_printed);
 */
 int print_X(va_list args)
 {
-unsigned int num = va_arg(args, unsigned int);
+unsigned long int num = va_arg(args, unsigned long int);
 int chars_printed = 0;
 char *s;
 
