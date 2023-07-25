@@ -106,6 +106,8 @@ int print_exc(va_list args, flag *f)
 
 	(void)f;
 
+	chars_printed = 0;
+
 	s = va_arg(args, char *);
 
 	if (!s)
