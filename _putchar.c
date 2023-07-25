@@ -8,7 +8,20 @@
  */
 int _putchar(char c)
 {
-	write(1, &c, 1);
+	static char buff[1024];
+	static int idx;
+
+	if (c == -1 || i >= 1024)
+	{
+		write(1, &buff, idx);
+		idx = 0;
+	}
+	if (c != -1)
+	{
+		buff[idx] = c;
+		idx++;
+	}
+
 	return (1);
 }
 /**
