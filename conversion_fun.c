@@ -30,18 +30,18 @@ int print_b(va_list args, flag *f)
 */
 int print_o(va_list args, flag *f)
 {
-unsigned int num;
-char *s;
-int i = 0;
+	unsigned int num;
+	char *s;
+	int i = 0;
 
-num = va_arg(args, unsigned int);
-s = convert(num, 8, 0);
+	num = va_arg(args, unsigned int);
+	s = convert(num, 8, 0);
 
-if (f->hash == 1 && s[0] != '0')
+	if (f->hash == 1 && s[0] != '0')
 		i += _putchar('0');
-i += _puts(s);
+	i += _puts(s);
 
-return (i);
+	return (i);
 }
 
 /**
@@ -52,18 +52,18 @@ return (i);
 */
 int print_x(va_list args, flag *f)
 {
-unsigned int num = va_arg(args, unsigned int);
-int chars_printed = 0;
-char *s;
+	unsigned int num = va_arg(args, unsigned int);
+	int chars_printed = 0;
+	char *s;
 
-s = convert(num, 16, 0);
+	s = convert(num, 16, 0);
 
-if (f->hash == 1 && s[0] != '0')
-	chars_printed += _puts("0x");
+	if (f->hash == 1 && s[0] != '0')
+		chars_printed += _puts("0x");
 
-chars_printed += _puts(s);
+	chars_printed += _puts(s);
 
-return (chars_printed);
+	return (chars_printed);
 }
 
 /**
@@ -74,15 +74,15 @@ return (chars_printed);
 */
 int print_X(va_list args, flag *f)
 {
-unsigned int num = va_arg(args, unsigned int);
-int chars_printed = 0;
-char *s;
+	unsigned int num = va_arg(args, unsigned int);
+	int chars_printed = 0;
+	char *s;
 
-s = convert(num, 16, 1);
+	s = convert(num, 16, 1);
 
-if (f->hash == 1 && s[0] != '0')
-	chars_printed += _puts("0X");
-chars_printed += _puts(s);
+	if (f->hash == 1 && s[0] != '0')
+		chars_printed += _puts("0X");
+	chars_printed += _puts(s);
 
-return (chars_printed);
+	return (chars_printed);
 }
