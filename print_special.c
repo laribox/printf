@@ -84,3 +84,36 @@ int print_rev(va_list args)
 	}
 	return (chars_printed);
 }
+/**
+ * print_exc - print exclusive str
+ * @args: passed str
+ * Return: chars_printed
+ */
+int print_exc(va_list args)
+{
+	char *s, *p;
+	int chars_printed, i;
+
+	s = va_arg(args, char *);
+
+	if (!s)
+		return (_puts("null"));
+
+	for (i = 0; s[i]; i++)
+	{
+		if (s[i] > 0 && (s[i] < 32 || s[i] >= 127))
+		{
+			_puts("\\x");
+			chars_printed += 2;
+
+			p = convert(s[i], 16, 1);
+			if (!p[1])
+				chars_printed += _putchar('0');
+
+			chars_printed += _puts(p);
+		}
+		else
+			chars_printed += _putchar(s[i]);
+	}
+	return (chars_printed);
+}

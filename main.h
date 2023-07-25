@@ -77,6 +77,8 @@ int print_r13(va_list args);
 /*print reversed str*/
 int print_rev(va_list args);
 
+/*print exclusive str*/
+int print_exc(va_list args);
 /*printf main*/
 int _printf(const char *format, ...);
 #endif /*MAIN_H*/

@@ -23,6 +23,7 @@ int main()
 	printf(" %p\n %p\n ", ULONG_MAX, -ULONG_MAX);
 	_printf(" %p\n %p\n ", 0, 0);
 	printf(" %p\n %p\n ", 0, 0);
-	
+
+	_printf("%S\n", "Best\nSchool");	
 	return (0);
 }
