@@ -10,28 +10,13 @@
 int print_d(va_list args)
 {
 	int num;
-	unsigned int div, dig;
 	int chars_printed;
 
 	chars_printed = 0;
 	num = va_arg(args, int);
-	if (num < 0)
-	{
-		chars_printed += _putchar('-');
-		num = -num;
-	}
 
-	div = 1;
-	while (num / div > 9)
-		div *= 10;
+	chars_printed += digit_printer(num);
 
-	while (div > 0)
-	{
-		dig = num / div;
-		chars_printed += _putchar('0' + dig);
-		num %= div;
-		div /= 10;
-	}
 	return (chars_printed);
 }
 /**
