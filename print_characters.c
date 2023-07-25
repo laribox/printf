@@ -10,7 +10,7 @@
  * Return: length of output
  */
 int print_c(va_list args, flag *f, length_mod *len,
-		char * width, char *precision)
+		char *width, char *precision)
 {
 	(void)f;
 	(void)len;
