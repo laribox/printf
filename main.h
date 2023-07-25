@@ -79,8 +79,6 @@ int print_x(va_list args);
 /*handle Unsigned hexadecimal integer upercase file task3_functions*/
 int print_X(va_list args);
 
-
-
 /*special string manipulation*/
 
 /*print address*/
@@ -94,6 +92,10 @@ int print_rev(va_list args);
 
 /*print exclusive str*/
 int print_exc(va_list args);
+
+/*flags && mods*/
+int get_flags(char s, flag *f);
+
 /*printf main*/
 int _printf(const char *format, ...);
 #endif /*MAIN_H*/
