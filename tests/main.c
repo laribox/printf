@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <limits.h>
 
+
 int main()
 {
 	_printf(" %p\n ", (void*)-1);
