@@ -17,7 +17,7 @@ int print_d(va_list args)
 
 	chars_printed += count_digit(num);/*counts digit number*/
 
-	if (num < 0)
+	if (num <= 0)
 		chars_printed++;
 
 	digit_printer(num);
