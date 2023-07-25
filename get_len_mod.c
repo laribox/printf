@@ -2,26 +2,26 @@
 
 /**
  * get_len_mod - modifier check
- * @
- * @
+ * @c: checked char
+ * @len: lenght modifier struct
  * Return: 1 || 0 (true || false)
  */
-int get_len_mod(char c, length_mod *m)
+int get_len_mod(char c, length_mod *len)
 {
-	int b = 0;
+	int Bool = 0;
 
 	switch (c)
 	{
 		case 'h':
-			m->h = 1;
-			b = 1;
+			len->h = 1;
+			Bool = 1;
 			break;
 		case 'l':
-			m->l = 1;
-			b = 1;
+			len->l = 1;
+			Bool = 1;
 			break;
 		default:
 			break;
 	}
-	return (b);
+	return (Bool);
 }
