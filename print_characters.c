@@ -6,9 +6,12 @@
  * @f: pointer to the flag struct
  * Return: length of output
  */
-int print_c(va_list args, flag *f)
+int print_c(va_list args, flag *f, length_mod *len , char* width, char *precision)
 {
 	(void)f;
+	(void)len;
+	(void)width;
+	(void)precision;
 
 	_putchar(va_arg(args, int));
 	return (1);
@@ -19,12 +22,15 @@ int print_c(va_list args, flag *f)
  * @f: pointer to the flag struct
  * Return: length of output
  */
-int print_s(va_list args, flag *f)
+int print_s(va_list args, flag *f, length_mod *len , char* width, char *precision)
 {
 	char *s;
 	int chars_printed;
 
 	(void)f;
+	(void)len;
+	(void)width;
+	(void)precision;
 
 	s = va_arg(args, char *); /*assign the varadiac argument to s*/
 
@@ -46,10 +52,13 @@ int print_s(va_list args, flag *f)
  * @f: pointer to the flag struct
  * Return: length of output
  */
-int print_percent(va_list args, flag *f)
+int print_percent(va_list args, flag *f, length_mod *len , char* width, char *precision)
 {
 	(void)f;
 	(void)args;
+	(void)len;
+	(void)width;
+	(void)precision;
 
 	return (_putchar('%'));
 }

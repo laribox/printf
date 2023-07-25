@@ -6,7 +6,7 @@
  * @f: pointer to the flag struct
  * Return: number of printed chars
  */
-int print_r13(va_list args, flag *f)
+int print_r13(va_list args, flag *f, length_mod *len , char* width, char *precision)
 {
 	char *s;
 	int i, j;
@@ -14,6 +14,9 @@ int print_r13(va_list args, flag *f)
 	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
 	(void)f;
+	(void)len;
+	(void)width;
+	(void)precision;
 
 	s = va_arg(args, char *);
 
@@ -41,13 +44,16 @@ int print_r13(va_list args, flag *f)
  * @f: pointer to the flag struct
  * Return: num of printed chars
  */
-int print_adr(va_list args, flag *f)
+int print_adr(va_list args, flag *f, length_mod *len , char* width, char *precision)
 {
 	int i;
 	char *s;
 	unsigned long int address;
 
 	(void)f;
+	(void)len;
+	(void)width;
+	(void)precision;
 
 	i = 0;
 	address = va_arg(args, unsigned long int);
@@ -69,13 +75,16 @@ int print_adr(va_list args, flag *f)
  * @f: pointer to the flag struct
  * Return: chars_printed
  */
-int print_rev(va_list args, flag *f)
+int print_rev(va_list args, flag *f, length_mod *len , char* width, char *precision)
 {
 	char *s;
 	char *p;
 	int chars_printed;
 
 	(void)f;
+	(void)len;
+	(void)width;
+	(void)precision;
 
 	s = va_arg(args, char *);
 	p = s;
@@ -99,12 +108,15 @@ int print_rev(va_list args, flag *f)
  * @f: pointer to the flag struct
  * Return: chars_printed
  */
-int print_exc(va_list args, flag *f)
+int print_exc(va_list args, flag *f, length_mod *len , char* width, char *precision)
 {
 	char *s, *p;
 	int chars_printed, i;
 
 	(void)f;
+	(void)len;
+	(void)width;
+	(void)precision;
 
 	chars_printed = 0;
 

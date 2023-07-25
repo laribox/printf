@@ -8,11 +8,15 @@
  * @f: pointer to the flag struct
  * Return: length of printed int
  */
-int print_d(va_list args, flag *f)
+int print_d(va_list args, flag *f, length_mod *len , char* width, char *precision)
 {
 	int num;
 	int chars_printed;
-
+	
+	(void)len;
+	(void)width;
+	(void)precision;
+	
 	chars_printed = 0;
 	num = va_arg(args, int);
 
@@ -79,12 +83,15 @@ int count_digit(int num)
 * @f: pointer to the flag struct
 * Return: length of printed unsigned int
 */
-int print_u(va_list args, flag *f)
+int print_u(va_list args, flag *f, length_mod *len , char* width, char *precision)
 {
 	unsigned int num;
 	char *s;
 
 	(void)f;
+	(void)len;
+	(void)width;
+	(void)precision;
 
 	num = va_arg(args, unsigned int);
 	s = convert(num, 10, 0);
