@@ -29,9 +29,9 @@ typedef struct types
  */
 typedef struct flags
 {
-	int plus;
-	int space;
-	int hash;
+        int plus;
+        int space;
+        int hash;
 } flag;
 /**
  * struct modifiers - check lenght mods
@@ -40,8 +40,8 @@ typedef struct flags
  */
 typedef struct modifiers
 {
-	int h;
-	int l;
+        int h;
+        int l;
 } length_mod;
 
 
@@ -52,8 +52,8 @@ typedef struct modifiers
  */
 typedef struct format
 {
-	char c;
-	int (*f)(va_list, flag *f, length_mod *, char *, char *);
+        char c;
+        int (*f)(va_list, flag *f, length_mod *, char *, char *);
 } s_id;
 
 /*Handle Functions*/
