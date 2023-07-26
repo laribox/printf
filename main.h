@@ -83,7 +83,7 @@ char *width, char *precision);
 /*base-conversion*/
 char *convert(unsigned long int n, int base, int cas);
 
-/*conversions*/
+/*functions to handle base conversions*/
 
 /*handle binary file print_numbers*/
 int print_b(va_list args, flag *f, length_mod *len,
