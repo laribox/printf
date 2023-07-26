@@ -4,22 +4,16 @@
 
 int main()
 {
-	int n = 1;
 
-	_printf("adress of n is: %p\n", &n);
-	printf("adress of n is: %p\n", &n);
-	
 
-	_printf("reverse is %r\n", "reverse");
+	_printf("Positive: %10d %10ld\n", 123,500);
+	_printf("Positive: %10d %hd\n", 123,600000);
+	printf("Positive: %10d %d\n", 123,-1);
 
-	_printf("Positive: %hd\n", 123);
-	printf("Positive: %hd\n", 123);
-
-	_printf("Negative: %d\n", -456);
+/*	_printf("Negative: %d\n", -456);
 	printf("Negative: %d\n", -456);
 
-
-	_printf("Large: %d\n", 2147483647);
+	printf("Large: %d\n", 2147483647);
 	printf("Large: %d\n", 2147483647);
 	_printf("Small: %d\n", -2147483648);
 	printf("Small: %d\n", -2147483648);
@@ -76,7 +70,7 @@ int main()
  _printf("length : %i\n",2147483650);
  printf("length : %i\n",2147483650);
 
-	/* Note: The wide characters test cases are omitted for standard printf*/
+ Note: The wide characters test cases are omitted for standard printf*/
 
 	return 0;
 }
