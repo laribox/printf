@@ -119,7 +119,8 @@ char *width, char *precision);
 int print_exc(va_list args, flag *f, length_mod *len,
 char *width, char *precision);
 
-/*flags && mods*/
+/*function to handle flags/width/precision*/
+/*flag*/
 int get_flags(char s, flag *f);
 int get_len_mod(char c, length_mod *len);
 char *get_precision(char *s);
