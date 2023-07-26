@@ -42,7 +42,8 @@ typedef struct format
 	int (*f)(va_list, flag *f, length_mod *, char *, char *);
 } s_id;
 
-/*Functions*/
+/*Handle Functions*/
+
 /*Callers*/
 int (*get_fun(char c))(va_list, flag *, length_mod *, char *, char *);
 
@@ -52,7 +53,7 @@ int _puts(char *s);
 
 /*print funcs per specifiers*/
 
-/*functions to handle charachters*/
+/*functions to handle characters*/
 
 /*handle char*/
 int print_c(va_list args, flag *f, length_mod *len,
