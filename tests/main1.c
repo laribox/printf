@@ -58,6 +58,15 @@ int main()
 	_printf("Very Large: %d\n", 999999999);
 	printf("Very Large: %d\n", 999999999);
 
+ _printf("length lu : %lu\n", 1844674407370955160);
+ printf("length lu : %lu\n", 1844674407370955160);
+ _printf("length ld : %lu\n", 0);
+ printf("length ld : %lu\n", 0);
+ _printf("length ld : %hu\n", 0);
+ printf("length ld : %hu\n", 0);
+ _printf("length lu : %hu\n", 65535);
+ printf("length lu : %hu\n", 65535);
+
  _printf("length ld : %ld  hi : %hi\n",-9223372036854775805,-32770);
  printf("length ld : %ld  hi : %hi\n",-9223372036854775805,-32770);
  printf("\n");
