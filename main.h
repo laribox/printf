@@ -52,7 +52,7 @@ int _puts(char *s);
 
 /*print funcs per specifiers*/
 
-/*charachters*/
+/*functions to handle charachters*/
 
 /*handle char*/
 int print_c(va_list args, flag *f, length_mod *len,
