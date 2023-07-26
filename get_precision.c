@@ -9,7 +9,9 @@ char *get_precision(char *s)
 {
 	if (*s == '*')
 	{
-		char *pre = (char *)malloc(2);
+		char *pre;
+
+		pre = (char *)malloc(2);
 
 		if (pre != NULL)
 		{
@@ -21,15 +23,18 @@ char *get_precision(char *s)
 	else
 	{
 		int length = 0;
+		int i;
+		char *pre;
 
 		while (s[length] >= '0' && s[length] <= '9')
 			length++;
 
-		char *pre = (char *)malloc(length + 1);
+		
+		pre = (char *)malloc(length + 1);
 
 		if (pre != NULL)
 		{
-			for (int i = 0; i < length; i++)
+			for (i = 0; i < length; i++)
 				pre[i] = s[i];
 			pre[length] = '\0';
 		}
