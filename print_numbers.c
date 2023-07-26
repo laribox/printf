@@ -14,12 +14,15 @@
 int print_d(va_list args, flag *f, length_mod *len,
 		char *width, char *precision)
 {
-	long int num;
+	long int num, first_arg = 0;
 	int chars_printed;
+	types t = {0, NULL};
 
 	(void)len;
 	(void)width;
 	(void)precision;
+	(void)first_arg;
+	(void)t;
 
 	chars_printed = 0;
 	if (len->l == 1)
@@ -28,7 +31,12 @@ int print_d(va_list args, flag *f, length_mod *len,
 		num = (short int)va_arg(args, int);
 	else
 		num = va_arg(args, int);
-
+	/*if (width[0] == "*")
+	{
+		first_arg = va_arg(args, long int);
+	}*/
+	t.integer = -num;
+	print_precision(width, first_arg, t);
 	if (f->space == 1 && f->plus == 0 && num >= 0)
 		chars_printed += _putchar(' ');
 	if (f->plus == 1 && num >= 0)

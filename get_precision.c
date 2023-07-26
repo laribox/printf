@@ -5,7 +5,7 @@
  * @s: passed character after '%'
  * Return: pointer to the precision string (either "*" or numeric value)
  */
-char *get_precision(char *s)
+char *get_precision(const char *s, const char **p)
 {
 	if (*s == '*')
 	{
@@ -15,6 +15,7 @@ char *get_precision(char *s)
 
 		if (pre != NULL)
 		{
+			(*p)++;
 			pre[0] = '*';
 			pre[1] = '\0';
 		}
@@ -34,7 +35,10 @@ char *get_precision(char *s)
 		if (pre != NULL)
 		{
 			for (i = 0; i < length; i++)
+			{
+				(*p)++;	
 				pre[i] = s[i];
+			}
 			pre[length] = '\0';
 		}
 		return (pre);
