@@ -14,23 +14,25 @@
 int print_d(va_list args, flag *f, length_mod *len,
 		char *width, char *precision)
 {
-	int num;
+	long int num;
 	int chars_printed;
 
+	(void)len;
 	(void)width;
 	(void)precision;
 
 	chars_printed = 0;
-	num = va_arg(args, int);
+	if (len->l == 1)
+		num = va_arg(args, long int);
+	else if (len->h == 1)
+		num = (short int)va_arg(args, int);
+	else
+		num = va_arg(args, int);
 
-	if (f->space == 1 && f->plus == 0 && num >= 0)/*flags*/
+	if (f->space == 1 && f->plus == 0 && num >= 0)
 		chars_printed += _putchar(' ');
 	if (f->plus == 1 && num >= 0)
 		chars_printed += _putchar('+');
-	if (len->h == 1 && num >= 0)/*len_mod*/
-		num = (short)num;
-	if (len->l == 1 && num >= 0)
-		num = (long)num;
 
 	chars_printed += count_digit(num);/*counts digit number*/
 
