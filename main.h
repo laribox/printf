@@ -34,7 +34,7 @@ typedef struct modifiers
 /**
  * struct format - list of type specifiers/modifying function
  * @c: Specifier char
- * @f: ptr to operation fn
+ * @f: ptr to operation functions
  */
 typedef struct format
 {
