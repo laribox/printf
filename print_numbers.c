@@ -44,48 +44,48 @@ int print_d(va_list args, flag *f, length_mod *len,
 	return (chars_printed);
 }
 /**
-  * digit_printer - print input number by digit
-  * @num: input number
-  * Return: print count
-  */
- void digit_printer(long int num)
- {
-         unsigned long int x;
- 
-         if (num < 0)
-         {
-                 _putchar('-');
-                 x = -num;
-         }
-         else
-                 x = num;
- 
-         if (x / 10)
-                 digit_printer(x / 10); /*recursion loop*/
- 
-         _putchar((x % 10) + '0'); /*print 1 dig*/
- }
+ * digit_printer - print input number by digit
+ * @num: input number
+ * Return: print count
+ */
+void digit_printer(long int num)
+{
+	unsigned long int x;
+
+	if (num < 0)
+	{
+		_putchar('-');
+		x = -num;
+	}
+	else
+		x = num;
+
+	if (x / 10)
+		digit_printer(x / 10); /*recursion loop*/
+
+	_putchar((x % 10) + '0'); /*print 1 dig*/
+}
 /**
-  * count_digit - counts the number of digits of a number
-  * @num: the number to count
-  * Return: the number of digits
-  */
- int count_digit(long int num)
- {
-         unsigned int count = 0;
-         unsigned long int n1;
- 
-         if (num < 0)
-                 n1 = num * -1;
-         else
-                 n1 = num;
-         while (n1 != 0)
-         {
-                 n1 /= 10;
-                 count++;
-         }
-         return (count++);
- }
+ * count_digit - counts the number of digits of a number
+ * @num: the number to count
+ * Return: the number of digits
+ */
+int count_digit(long int num)
+{
+	unsigned int count = 0;
+	unsigned long int n1;
+
+	if (num < 0)
+		n1 = num * -1;
+	else
+		n1 = num;
+	while (n1 != 0)
+	{
+		n1 /= 10;
+		count++;
+	}
+	return (count++);
+}
 /**
  * print_u - Print unsigned int
  * @args: passed integer

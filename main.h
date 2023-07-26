@@ -70,9 +70,9 @@ char *width, char *precision);
 int print_d(va_list args, flag *f, length_mod *len,
 char *width, char *precision);
 /*solve the int_max issue(print number)*/
-void digit_printer(int num);
+void digit_printer(long int num);
 /*number counter*/
-int count_digit(int num);
+int count_digit(long int num);
 /*handle unsigned int*/
 int print_u(va_list args, flag *f, length_mod *len,
 char *width, char *precision);
