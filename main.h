@@ -4,9 +4,23 @@
 #include <stdarg.h>
 #include <stddef.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /*Structures*/
 
+/**
+ * struct types - check for types
+ * @integer: int
+ * @unsign: unsigned
+ * @string: characterr or string
+ */
+typedef struct types
+{
+  long int integer; 
+  char *string;
+
+
+} types;
 /**
  * struct flags - check for flag
  * @plus: +
@@ -120,13 +134,16 @@ char *width, char *precision);
 int print_exc(va_list args, flag *f, length_mod *len,
 char *width, char *precision);
 
+void print_precision(char *precision, int first_arg, types t);
+int _atoi(const char *s);
+
 /*function to handle flags/width/precision*/
 /*flag*/
 int get_flags(char s, flag *f);
 /*modifiers*/
 int get_len_mod(char c, length_mod *len);
 /*precision*/
-char *get_precision(char *s);
+char *get_precision(const char *s, const char **p);
 int get_precision_length(char *s);
 
 /*printf main*/

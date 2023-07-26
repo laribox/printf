@@ -8,7 +8,7 @@
 char *get_precision(char *s)
 {
 	if (*s == '*')
-	{
+{
 		char *pre;
 
 		pre = (char *)malloc(2);
