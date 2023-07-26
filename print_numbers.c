@@ -44,27 +44,27 @@ int print_d(va_list args, flag *f, length_mod *len,
 	return (chars_printed);
 }
 /**
- * digit_printer - print input number by digit
- * @num: input number
- * Return: print count
- */
-void digit_printer(int num)
-{
-	unsigned int x;
-
-	if (num < 0)
-	{
-		_putchar('-');
-		x = -num;
-	}
-	else
-		x = num;
-
-	if (x / 10)
-		digit_printer(x / 10); /*recursion loop*/
-
-	_putchar((x % 10) + '0'); /*print 1 dig*/
-}
+  * digit_printer - print input number by digit
+  * @num: input number
+  * Return: print count
+  */
+ void digit_printer(long int num)
+ {
+         unsigned long int x;
+ 
+         if (num < 0)
+         {
+                 _putchar('-');
+                 x = -num;
+         }
+         else
+                 x = num;
+ 
+         if (x / 10)
+                 digit_printer(x / 10); /*recursion loop*/
+ 
+         _putchar((x % 10) + '0'); /*print 1 dig*/
+ }
 /**
  * count_digit - counts the number of digits of a number
  * @num: the number to count
