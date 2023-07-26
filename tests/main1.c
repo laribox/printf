@@ -9,6 +9,7 @@ int main()
 	_printf("adress of n is: %p\n", &n);
 	printf("adress of n is: %p\n", &n);
 	
+
 	_printf("reverse is %r\n", "reverse");
 
 	_printf("Positive: %hd\n", 123);
@@ -57,7 +58,14 @@ int main()
 	_printf("Very Large: %d\n", 999999999);
 	printf("Very Large: %d\n", 999999999);
 
-
+ _printf("length ld : %ld  hi : %hi\n",-9223372036854775805,-32770);
+ printf("length ld : %ld  hi : %hi\n",-9223372036854775805,-32770);
+ printf("\n");
+ _printf("length : %hd  %i\n",32770,2147483650);
+ printf("length : %hd  %i\n",32770,2147483650);
+ printf("\n");
+ _printf("length : %i\n",2147483650);
+ printf("length : %i\n",2147483650);
 
 	/* Note: The wide characters test cases are omitted for standard printf*/
 
