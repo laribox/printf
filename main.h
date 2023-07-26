@@ -122,6 +122,7 @@ char *width, char *precision);
 /*function to handle flags/width/precision*/
 /*flag*/
 int get_flags(char s, flag *f);
+/*modifiers*/
 int get_len_mod(char c, length_mod *len);
 char *get_precision(char *s);
 int get_precision_length(char *s);
