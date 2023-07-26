@@ -98,20 +98,20 @@ int count_digit(long int num)
 int print_u(va_list args, flag *f, length_mod *len,
 		char *width, char *precision)
 {
-	unsigned int num;
+	unsigned long int num;
 	char *s;
 
 	(void)f;
+	(void)len;
 	(void)width;
 	(void)precision;
 
-	num = va_arg(args, unsigned int);
-
-	if (len->h == 1)
-		num = (unsigned short)num;
 	if (len->l == 1)
-		num = (unsigned long)num;
-
+		num = va_arg(args, unsigned long int);
+	else if (len->h == 1)
+		num = (unsigned short int)va_arg(args, unsigned int);
+	else
+		num = va_arg(args, unsigned int);
 	s = convert(num, 10, 0);
 
 	return (_puts(s));

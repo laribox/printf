@@ -25,8 +25,6 @@ int print_b(va_list args, flag *f, length_mod *len,
 
 	return (_puts(s));
 }
-
-
 /**
  * print_o - print octal of unsigned int
  * @args: passed integer
@@ -41,19 +39,20 @@ int print_b(va_list args, flag *f, length_mod *len,
 int print_o(va_list args, flag *f, length_mod *len,
 		char *width, char *precision)
 {
-	unsigned int num;
+	unsigned long int num;
 	char *s;
 	int i = 0;
 
+	(void)len;
 	(void)width;
 	(void)precision;
 
-	num = va_arg(args, unsigned int);
-	if (len->h == 1)
-		num = (unsigned short)num;
 	if (len->l == 1)
-		num = (unsigned long)num;
-
+		num = va_arg(args, unsigned long int);
+	else if (len->h == 1)
+		num = (unsigned short int)va_arg(args, unsigned int);
+	else
+		num = va_arg(args, unsigned int);
 	s = convert(num, 8, 0);
 
 	if (f->hash == 1 && s[0] != '0')
@@ -62,6 +61,7 @@ int print_o(va_list args, flag *f, length_mod *len,
 
 	return (i);
 }
+
 
 /**
  * print_x - print hexadecimal (lowercase)
@@ -75,18 +75,19 @@ int print_o(va_list args, flag *f, length_mod *len,
 int print_x(va_list args, flag *f, length_mod *len,
 		char *width, char *precision)
 {
-	unsigned int num = va_arg(args, unsigned int);
+	unsigned long int num;
 	int chars_printed = 0;
 	char *s;
 
+	(void)len;
 	(void)width;
 	(void)precision;
-
-	if (len->h == 1)
-		num = (unsigned short)num;
 	if (len->l == 1)
-		num = (unsigned long)num;
-
+		num = va_arg(args, unsigned long int);
+	else if (len->h == 1)
+		num = (unsigned short int)va_arg(args, unsigned int);
+	else
+		num = va_arg(args, unsigned int);
 	s = convert(num, 16, 0);
 
 	if (f->hash == 1 && s[0] != '0')
@@ -109,17 +110,20 @@ int print_x(va_list args, flag *f, length_mod *len,
 int print_X(va_list args, flag *f, length_mod *len,
 		char *width, char *precision)
 {
-	unsigned int num = va_arg(args, unsigned int);
+	unsigned long int num;
 	int chars_printed = 0;
 	char *s;
 
+	(void)len;
 	(void)width;
 	(void)precision;
 
-	if (len->h == 1)
-		num = (unsigned short)num;
 	if (len->l == 1)
-		num = (unsigned long)num;
+		num = va_arg(args, unsigned long int);
+	else if (len->h == 1)
+		num = (unsigned short int)va_arg(args, unsigned int);
+	else
+		num = va_arg(args, unsigned int);
 
 	s = convert(num, 16, 1);
 
