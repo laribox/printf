@@ -101,7 +101,7 @@ char *width, char *precision);
 int print_X(va_list args, flag *f, length_mod *len,
 char *width, char *precision);
 
-/*special string manipulation*/
+/*function to handle special string manipulation*/
 
 /*print address*/
 int print_adr(va_list args, flag *f, length_mod *len,
@@ -124,6 +124,7 @@ int get_flags(char s, flag *f);
 int get_len_mod(char c, length_mod *len);
 char *get_precision(char *s);
 int get_precision_length(char *s);
+
 /*printf main*/
 int _printf(const char *format, ...);
 
