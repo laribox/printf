@@ -6,7 +6,7 @@ int main()
 {
 
 
-	_printf("Positive: %10d %10ld\n", 123,500);
+	_printf("Positive: %10d %10ld\n", 123,-500);
 	_printf("Positive: %10d %hd\n", 123,600000);
 	printf("Positive: %10d %d\n", 123,-1);
 
