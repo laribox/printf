@@ -118,7 +118,7 @@ char *width, char *precision);
 
 /*flags && mods*/
 int get_flags(char s, flag *f);
-
+int get_len_mod(char c, length_mod *len);
 /*printf main*/
 int _printf(const char *format, ...);
 

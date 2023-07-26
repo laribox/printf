@@ -48,12 +48,12 @@ int print_o(va_list args, flag *f, length_mod *len,
 	(void)width;
 	(void)precision;
 
+	num = va_arg(args, unsigned int);
 	if (len->h == 1)
 		num = (unsigned short)num;
 	if (len->l == 1)
 		num = (unsigned long)num;
 
-	num = va_arg(args, unsigned int);
 	s = convert(num, 8, 0);
 
 	if (f->hash == 1 && s[0] != '0')

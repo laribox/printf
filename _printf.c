@@ -70,4 +70,3 @@ int print_helper(const char *format, va_list args)
 	_putchar(-1);
 	return (chars_printed);
 }
-

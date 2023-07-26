@@ -11,8 +11,8 @@ int main()
 	
 	_printf("reverse is %r\n", "reverse");
 
-	_printf("Positive: %d\n", 123);
-	printf("Positive: %d\n", 123);
+	_printf("Positive: %hd\n", 123);
+	printf("Positive: %hd\n", 123);
 
 	_printf("Negative: %d\n", -456);
 	printf("Negative: %d\n", -456);
