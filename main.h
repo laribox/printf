@@ -124,6 +124,7 @@ char *width, char *precision);
 int get_flags(char s, flag *f);
 /*modifiers*/
 int get_len_mod(char c, length_mod *len);
+/*precision*/
 char *get_precision(char *s);
 int get_precision_length(char *s);
 
