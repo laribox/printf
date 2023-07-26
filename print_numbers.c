@@ -66,26 +66,26 @@ int print_d(va_list args, flag *f, length_mod *len,
          _putchar((x % 10) + '0'); /*print 1 dig*/
  }
 /**
- * count_digit - counts the number of digits of a number
- * @num: the number to count
- * Return: the number of digits
- */
-int count_digit(int num)
-{
-	unsigned int count = 0;
-	unsigned int n1;
-
-	if (num < 0)
-		n1 = num * -1;
-	else
-		n1 = num;
-	while (n1 != 0)
-	{
-		n1 /= 10;
-		count++;
-	}
-	return (count++);
-}
+  * count_digit - counts the number of digits of a number
+  * @num: the number to count
+  * Return: the number of digits
+  */
+ int count_digit(long int num)
+ {
+         unsigned int count = 0;
+         unsigned long int n1;
+ 
+         if (num < 0)
+                 n1 = num * -1;
+         else
+                 n1 = num;
+         while (n1 != 0)
+         {
+                 n1 /= 10;
+                 count++;
+         }
+         return (count++);
+ }
 /**
  * print_u - Print unsigned int
  * @args: passed integer
