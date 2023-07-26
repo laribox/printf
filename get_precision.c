@@ -29,7 +29,6 @@ char *get_precision(char *s)
 		while (s[length] >= '0' && s[length] <= '9')
 			length++;
 
-		
 		pre = (char *)malloc(length + 1);
 
 		if (pre != NULL)
